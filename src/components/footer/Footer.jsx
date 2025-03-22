@@ -32,12 +32,20 @@ function Footer() {
       <Box
         sx={{
           display: "flex",
+          flexWrap: "wrap",
           //   justifyContent: "center",
           justifyContent: {
-            xs: "flex-end",
-            md: "center",
+            xs: "space-between",
+            sm: "center",
             lg: "center",
             xl: "center",
+          },
+          "@media (min-width: 600px) and (max-width: 700px)": {
+            justifyContent: "flex-end",
+          },
+          "@media (max-width: 425px)": {
+            justifyContent: "center",
+            gap: "7px",
           },
           alignItems: "center",
           width: "100%",
@@ -49,10 +57,22 @@ function Footer() {
       >
         <Box
           sx={{
-            position: "absolute",
-            left: "20px",
-            top: "50%",
-            transform: "translateY(-50%)",
+            position: {
+              xs: "relative",
+              sm: "absolute",
+            },
+            left: {
+              xs: "0",
+              sm: "20px",
+            },
+            top: {
+              xs: "0",
+              sm: "50%",
+            },
+            transform: {
+              xs: "translateY(0)",
+              sm: "translateY(-50%)",
+            },
             fontSize: "14px",
             fontWeight: "bold",
             color: "#fff",

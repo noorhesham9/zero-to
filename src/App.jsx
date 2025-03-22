@@ -41,9 +41,11 @@ function App() {
       <Header sectionNames={sectionNames2} />
       <Swiper
         style={{
-          height: "100vh",
+          height: "calc(100vh - 100px)",
           width: "100%",
           overflow: "hidden",
+          margin: "100px 0 0 0",
+          marginTop: "100px",
         }}
         direction={"vertical"}
         slidesPerView={1}
