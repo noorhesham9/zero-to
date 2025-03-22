@@ -42,7 +42,7 @@ body {
 
 .swiper-pagination-bullet {
   width: fit-content;
-  height: 50px;
+  height: 32px;
   text-align: center;
   line-height: 20px;
   font-size: 12px;
@@ -80,10 +80,10 @@ body {
   content: "";
   position: absolute;
   width: 2px;
-  height: 20px;
+  height: 15px;
   background: rgba(255, 255, 255, 0.6);
-  top: -14px;
-  left: 6px;
+  top: -11px;
+  left: 5px;
 }
 
 .swiper-pagination-bullet:first-child::before {
