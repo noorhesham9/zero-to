@@ -1,0 +1,51 @@
+.aboutUsTitle {
+  font-size: 27px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  position: relative;
+  margin-left: 55px;
+  font-weight: 700;
+  color: #fb613d;
+  font-family: var(--fontNav-headding);
+  span {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #fb613d;
+    left: -53px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.aboutUsText {
+  font-size: 25px;
+  font-family: "Boldonse", system-ui;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  /* background-image: url(./backgrounddd.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fb613d; */
+}
+
+.aboutUsDescription {
+  font-size: 15px;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+  max-width: 700px;
+  font-family: "Funnel Sans", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 500;
+}

@@ -103,7 +103,7 @@ function Header({ sectionNames }) {
         top: 0,
         left: 0,
         width: "100%",
-        height: "110px",
+        height: "70px",
         background: "#333",
         color: "#fff",
         display: "flex",
@@ -126,7 +126,7 @@ function Header({ sectionNames }) {
         <Box
           sx={{
             width: "200px",
-            height: "110px",
+            height: "100%",
             cursor: "pointer",
             display: "flex",
             padding: "0px 10px",
@@ -148,8 +148,9 @@ function Header({ sectionNames }) {
                 borderRadius: "5px",
               },
               position: "relative",
-              width: "150px",
-              height: "110px",
+              // width: "150px",
+              maxHeight: "70px",
+
               cursor: "pointer",
               display: "flex",
               padding: "0px 10px",
@@ -160,7 +161,7 @@ function Header({ sectionNames }) {
             <img
               style={{
                 width: "100%",
-                height: "100%",
+                maxHeight: "70px",
               }}
               src="./Zero-To2.svg"
               alt=""
@@ -195,13 +196,22 @@ function Header({ sectionNames }) {
             >
               <HomeRoundedIcon
                 sx={{
-                  width: "28px",
-                  height: "28px",
+                  width: {
+                    xs: "20px",
+                    sm: "28px",
+                  },
+                  height: {
+                    xs: "20px",
+                    sm: "28px",
+                  },
                 }}
               />
               <Typography
                 sx={{
-                  fontSize: "26px",
+                  fontSize: {
+                    xs: "24px",
+                    sm: "28px",
+                  },
                   fontFamily: "var(--font-headding )",
                 }}
               >
@@ -252,7 +262,7 @@ function Header({ sectionNames }) {
               zIndex: 2,
 
               width: "300px",
-              height: "calc(100vh - 20px)",
+              height: "calc(100vh - 20px )",
               margin: "10px auto",
               display: "flex",
               justifyContent: "space-evenly",

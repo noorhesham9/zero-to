@@ -18,7 +18,6 @@ function Footer() {
         left: 0,
         width: "100%",
         height: "50px",
-        // background: "#333",
         color: "#fff",
         display: "flex",
         justifyContent: "center",
@@ -26,7 +25,7 @@ function Footer() {
         padding: "10px",
         boxSizing: "border-box",
         zIndex: 1000,
-        pointerEvents: "none" /* Allow interactions with underlying elements */,
+        pointerEvents: "none",
       }}
     >
       <Box
@@ -45,6 +44,7 @@ function Footer() {
           },
           "@media (max-width: 425px)": {
             justifyContent: "center",
+            flexDirection: "column-reverse",
             gap: "7px",
           },
           alignItems: "center",

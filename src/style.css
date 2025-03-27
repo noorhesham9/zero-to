@@ -1,10 +1,13 @@
-#app {
-  height: 100%;
-}
 html,
 body {
   position: relative;
-  height: 100%;
+  height: 100vh;
+  width: 100%;
+}
+#root {
+  position: relative;
+  height: 100vh;
+  width: 100%;
 }
 
 body {
@@ -61,6 +64,12 @@ body {
   right: auto !important;
   font-family: "Caveat", cursive;
 }
+@media (max-width: 600px) {
+  .swiper-pagination {
+    left: 7px !important;
+    right: auto !important;
+  }
+}
 .swiper-pagination-bullet .dot {
   width: 8px;
   height: 8px;
@@ -96,6 +105,11 @@ body {
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   margin-top: 3px;
+}
+@media (max-width: 600px) {
+  .swiper-pagination-bullet .text {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet-active .text {

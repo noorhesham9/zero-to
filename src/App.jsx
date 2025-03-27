@@ -8,48 +8,60 @@ import "./index.css";
 import Home from "./components/home/Home";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import AboutUs from "./components/aboutUs/AboutUs";
+import { useEffect, useState } from "react";
+import OurPhilosophy from "./components/OurPhilosophy/OurPhilosophy";
 
 function App() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [visitedSlides, setVisitedSlides] = useState(new Set()); // Store visited slides
+
+  useEffect(() => {
+    console.log(activeIndex);
+  }, [activeIndex]);
   const sectionNames = [
     "HOME",
-    "WE HELP",
+    "ABOUT US",
     "PHILOSOPHY",
     "LATEST PROJECTS",
-    "DEPARTMENTS",
-    "CLIENTS",
     "SERVICES",
     "LET'S TALK",
-    "OUR TEAM",
     "CONTACT",
   ];
 
   const sectionNames2 = [
     "Home",
-    "We Help",
+    "About Us",
     "Philosophy",
     "Latest Projects",
-    "Departments",
-    "Clients",
     "Services",
     "Let's Talk",
-    "Our Team",
     "Contact",
   ];
 
   return (
-    <>
+    <div
+      style={{
+        // position: "relative",
+        height: "100%",
+        overflow: "hidden",
+        backgroundColor: "#1e1e1e",
+      }}
+    >
       <Header sectionNames={sectionNames2} />
       <Swiper
+        onSlideChange={(swiper) => {
+          setActiveIndex(swiper.activeIndex);
+          setVisitedSlides((prev) => new Set(prev).add(swiper.activeIndex));
+        }}
         style={{
-          height: "calc(100vh - 100px)",
+          height: "calc(100% - 70px)",
           width: "100%",
           overflow: "hidden",
-          margin: "100px 0 0 0",
-          marginTop: "100px",
+          margin: "70px 0 0 0",
         }}
         direction={"vertical"}
         slidesPerView={1}
-        spaceBetween={30}
         speed={1100}
         mousewheel={true}
         pagination={{
@@ -59,7 +71,7 @@ function App() {
           <div class="dot">
           </div>
           <span class="text">${sectionNames[index]}</span>
-      </div>`;
+          </div>`;
           },
         }}
         modules={[Mousewheel, Pagination]}
@@ -68,17 +80,22 @@ function App() {
         <SwiperSlide>
           <Home />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>
+          <AboutUs visitedSlides={visitedSlides} activeIndex={activeIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <OurPhilosophy
+            visitedSlides={visitedSlides}
+            activeIndex={activeIndex}
+          />
+        </SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
       <Footer />
-    </>
+    </div>
   );
 }
 
