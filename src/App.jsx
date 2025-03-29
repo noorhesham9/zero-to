@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer";
 import AboutUs from "./components/aboutUs/AboutUs";
 import { useEffect, useState } from "react";
 import OurPhilosophy from "./components/OurPhilosophy/OurPhilosophy";
+import LatestProjects from "./components/LatestProjects/LatestProjects";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,6 +51,7 @@ function App() {
     >
       <Header sectionNames={sectionNames2} />
       <Swiper
+        className="main-swiper"
         onSlideChange={(swiper) => {
           setActiveIndex(swiper.activeIndex);
           setVisitedSlides((prev) => new Set(prev).add(swiper.activeIndex));
@@ -67,7 +69,7 @@ function App() {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return `<div class="${className}">
+            return `<div class="${className} main-swiperbullets">
           <div class="dot">
           </div>
           <span class="text">${sectionNames[index]}</span>
@@ -75,7 +77,6 @@ function App() {
           },
         }}
         modules={[Mousewheel, Pagination]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <Home />
@@ -89,7 +90,12 @@ function App() {
             activeIndex={activeIndex}
           />
         </SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>
+          <LatestProjects
+            visitedSlides={visitedSlides}
+            activeIndex={activeIndex}
+          />
+        </SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>

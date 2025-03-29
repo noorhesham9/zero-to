@@ -43,7 +43,7 @@ body {
   object-fit: cover;
 }
 
-.swiper-pagination-bullet {
+.swiper-pagination-bullet.main-swiperbullets {
   width: fit-content;
   height: 32px;
   text-align: center;
@@ -58,19 +58,24 @@ body {
   position: relative;
   cursor: pointer;
 }
-
-.swiper-pagination {
-  left: 15px !important;
-  right: auto !important;
-  font-family: "Caveat", cursive;
-}
-@media (max-width: 600px) {
-  .swiper-pagination {
-    left: 7px !important;
+.main-swiper {
+  > .swiper-pagination {
+    left: 15px !important;
     right: auto !important;
+    font-family: "Caveat", cursive;
   }
 }
-.swiper-pagination-bullet .dot {
+
+@media (max-width: 600px) {
+  .main-swiper {
+    > .swiper-pagination {
+      left: 15px !important;
+      right: auto !important;
+      font-family: "Caveat", cursive;
+    }
+  }
+}
+.swiper-pagination-bullet.main-swiperbullets .dot {
   width: 8px;
   height: 8px;
   background: transparent;
@@ -78,14 +83,14 @@ body {
   border-radius: 50%;
   transition: 0.3s ease-in-out;
 }
-.swiper-pagination-bullet-active .dot {
+.swiper-pagination-bullet-active.main-swiperbullets .dot {
   width: 9px;
   height: 9px;
   background: #fb613d;
   border: 2px solid #fb613d;
 }
 
-.swiper-pagination-bullet::before {
+.main-swiperbullets.swiper-pagination-bullet::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -95,11 +100,11 @@ body {
   left: 5px;
 }
 
-.swiper-pagination-bullet:first-child::before {
+.main-swiperbullets.swiper-pagination-bullet:first-child::before {
   display: none;
 }
 
-.swiper-pagination-bullet .text {
+.swiper-pagination-bullet.main-swiperbullets .text {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   margin-left: 10px;
@@ -107,12 +112,12 @@ body {
   margin-top: 3px;
 }
 @media (max-width: 600px) {
-  .swiper-pagination-bullet .text {
+  .swiper-pagination-bullet.main-swiperbullets .text {
     display: none;
   }
 }
 
-.swiper-pagination-bullet-active .text {
+.swiper-pagination-bullet-active.main-swiperbullets .text {
   color: #fb613d;
   font-size: large;
   font-weight: 700;
