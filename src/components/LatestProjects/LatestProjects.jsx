@@ -5,19 +5,46 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./latestProjects.css";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { Box, Button, Container } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
+import "swiper/css/autoplay";
+
 function LatestProjects({ activeIndex, visitedSlides }) {
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
   const sentence = "Latest Project"; // Your text
   const words = sentence.split(" ");
 
+  const Projects = [
+    {
+      name: "Magic eyes",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a unde dignissimos suscipit dicta esse maiores nihil vero dolorum porro, quo, cupiditate eius fuga ea modi, reprehenderit ducimus explicabo exercitationem odio! Sequi.",
+      image: "./project1.webp",
+    },
+    {
+      name: "Project 2",
+      description:
+        "Vestibulum quis enim vel nisi tincidunt faucibus. Sed euismod, nunc eget tristique placerat, justo mauris dapibus velit, at interdum ipsum diam ac enim.",
+      image: "./project2.jpg",
+    },
+    {
+      name: "Project 3",
+      description:
+        "Morbi consectetur lacus et ipsum commodo, ut tincidunt neque molestie. Sed euismod, nunc eget tristique placerat, justo mauris dapibus velit, at interdum ipsum diam ac enim.",
+      image: "./project3.jpg",
+    },
+  ];
+
   return (
     <div
       style={{
-        backgroundColor: "black",
+        backgroundColor: "#00000075",
+        backgroundImage: "url(./latestProjects.jpg)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "Top Center",
         height: "100%",
         width: "100%",
         overflow: "hidden",
@@ -31,7 +58,6 @@ function LatestProjects({ activeIndex, visitedSlides }) {
         sx={{
           color: "white",
           textAlign: "left",
-          marginLeft: "10px !important",
         }}
       >
         <AnimatePresence key={"1"}>
@@ -43,8 +69,8 @@ function LatestProjects({ activeIndex, visitedSlides }) {
               height: "100%",
               zIndex: 10,
               marginLeft: {
-                xs: "20px",
-                sm: "145px",
+                xs: "15px",
+                sm: "135px",
               },
             }}
           >
@@ -111,10 +137,28 @@ function LatestProjects({ activeIndex, visitedSlides }) {
             </div>
           </Box>
           <Box
+            component={motion.div}
+            initial={{
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            animate={
+              visitedSlides.has(3)
+                ? {
+                    opacity: 1,
+                  }
+                : activeIndex === 3
+                ? {
+                    opacity: 1,
+                  }
+                : {}
+            }
+            transition={{ duration: 0.7, delay: 1.4 + 0.2 * 2 }}
             sx={{
               "@media (max-width: 776px)": {
                 flexDirection: "column",
               },
+              marginBottom: "40px",
               display: "flex",
               marginTop: "15px",
               gap: "15px",
@@ -124,15 +168,19 @@ function LatestProjects({ activeIndex, visitedSlides }) {
               height: "100%",
               zIndex: 10,
               marginLeft: {
-                xs: "20px",
-                sm: "145px",
+                xs: "15px",
+                sm: "135px",
               },
             }}
           >
             {/* First Swiper */}
             <Swiper
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
               className="swiper-projects"
-              modules={[Controller, Pagination]}
+              modules={[Controller, Pagination, Autoplay]}
               pagination={{
                 clickable: true,
                 renderBullet: function (index, className) {
@@ -146,90 +194,106 @@ function LatestProjects({ activeIndex, visitedSlides }) {
               controller={{ control: secondSwiper }}
               slidesPerView={1}
               loop={true}
+              speed={1000}
             >
-              <SwiperSlide
-                style={{
-                  backgroundColor: "#f8312f",
-                }}
-              >
-                Slide 1 - First Swiper
-              </SwiperSlide>
-              <SwiperSlide
-                style={{
-                  backgroundColor: "#05038b",
-                }}
-              >
-                Slide 2 - First Swiper
-              </SwiperSlide>
-              <SwiperSlide
-                style={{
-                  backgroundColor: "#f82fb5",
-                }}
-              >
-                Slide 3 - First Swiper
-              </SwiperSlide>
+              {Projects.map((project, index) => (
+                <SwiperSlide key={index} style={{}}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "100%",
+
+                      aspectRatio: "1",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <img
+                      style={{
+                        aspectRatio: "1",
+                        width: "calc(100% )",
+                        objectFit: "contain",
+                      }}
+                      src={project.image}
+                      alt={project.name}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
 
             {/* Second Swiper */}
-            <Swiper
+            <div
               style={{
-                maxWidth: "400px",
-                margin: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                justifyContent: "space-between",
+                overflow: "hidden",
+                maxWidth: "500px",
+                alignItems: "flex-start",
                 color: "white",
-                textAlign: "left",
-                fontSize: "12px",
+                fontSize: "13px",
               }}
-              modules={[Controller]}
-              onSwiper={setSecondSwiper}
-              controller={{ control: firstSwiper }}
-              slidesPerView={1}
-              loop={true}
             >
-              <SwiperSlide
+              <Swiper
                 style={{
+                  width: "100%",
+                  flexGrow: "1",
+                  height: "fit-content",
+                  margin: 0,
+                  color: "white",
                   textAlign: "left",
-                  backgroundColor: "transparent",
-
-                  fontSize: "12px",
+                  fontSize: "13px",
+                }}
+                modules={[Controller]}
+                onSwiper={setSecondSwiper}
+                controller={{ control: firstSwiper }}
+                slidesPerView={1}
+                loop={true}
+              >
+                {Projects.map((project, index) => (
+                  <SwiperSlide
+                    style={{
+                      marginTop: "5px",
+                      textAlign: "left",
+                      backgroundColor: "transparent",
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "flex-start",
+                    }}
+                    className="SLideDescription"
+                    key={index}
+                  >
+                    {project.description}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <Button
+                sx={{
+                  variant: "contained",
+                  backgroundColor: "#aaaaaa6c",
+                  border: "1px solid #fb613d",
+                  fontFamily: "var(--font-headding)",
+                  color: "#fb613d",
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  transition: "0.3s ease-in-out",
+                  padding: "5px 10px",
+                  "&:hover": {
+                    color: "white",
+                  },
+                  "&:disabled": {
+                    backgroundColor: "gray",
+                    color: "white",
+                    cursor: "not-allowed",
+                  },
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a
-                unde dignissimos suscipit dicta esse maiores nihil vero dolorum
-                porro, quo, cupiditate eius fuga ea modi, reprehenderit ducimus
-                explicabo exercitationem odio! Sequi.
-              </SwiperSlide>
-              <SwiperSlide
-                style={{
-                  textAlign: "left",
-                  backgroundColor: "transparent",
-                  fontSize: "12px",
-                }}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a
-                unde dignissimos suscipit dicta esse maiores nihil vero dolorum
-                porro, quo, cupiditate eius fuga ea modi, reprehenderit ducimus
-                explicabo exercitationem odio! Sequi.
-              </SwiperSlide>
-              <SwiperSlide
-                style={{
-                  textAlign: "left",
-                  backgroundColor: "transparent",
-                  fontSize: "14px",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  gap: "10px",
-                }}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a
-                unde dignissimos suscipit dicta esse maiores nihil vero dolorum
-                porro, quo, cupiditate eius fuga ea modi, reprehenderit ducimus
-                explicabo exercitationem odio! Sequi.
-                <Button sx={{}} variant="contained">
-                  sdligfh
-                </Button>
-              </SwiperSlide>
-            </Swiper>
+                Rest Of Projects
+              </Button>
+            </div>
           </Box>
         </AnimatePresence>
       </Container>

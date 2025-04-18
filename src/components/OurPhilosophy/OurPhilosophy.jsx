@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
-import React from "react";
 import { Container } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 function OurPhilosophy({ activeIndex, visitedSlides }) {
@@ -22,7 +21,6 @@ function OurPhilosophy({ activeIndex, visitedSlides }) {
         sx={{
           color: "white",
           textAlign: "left",
-          marginLeft: "10px !important",
         }}
       >
         <AnimatePresence>
@@ -34,7 +32,7 @@ function OurPhilosophy({ activeIndex, visitedSlides }) {
               height: "100%",
               zIndex: 10,
               marginLeft: {
-                xs: "20px",
+                xs: "15px",
                 sm: "135px",
               },
             }}
@@ -124,7 +122,7 @@ function OurPhilosophy({ activeIndex, visitedSlides }) {
                 only deliver results but also inspire growth and unleash the
                 full potential of our clients. With a keen eye for detail and a
                 passion for excellence, we strive to be the catalyst for change
-                and the driving force behind our clients' digital
+                and the driving force behind our clients&lsquo; digital
                 transformations.
               </motion.p>
             </Box>

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import "./aboutUs.css";
 import { Box, Container } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
@@ -23,7 +22,6 @@ function AboutUs({ activeIndex, visitedSlides }) {
         sx={{
           color: "white",
           textAlign: "left",
-          marginLeft: "10px !important",
         }}
       >
         <AnimatePresence>
@@ -35,7 +33,7 @@ function AboutUs({ activeIndex, visitedSlides }) {
               height: "100%",
               zIndex: 10,
               marginLeft: {
-                xs: "20px",
+                xs: "15px",
                 sm: "135px",
               },
             }}
@@ -126,8 +124,8 @@ function AboutUs({ activeIndex, visitedSlides }) {
                 <br />
                 We believe in the power of creativity and innovation to drive
                 success. Our approach is centered around understanding our
-                clients' goals and challenges, allowing us to develop tailored
-                strategies that deliver results.
+                clients&apos; goals and challenges, allowing us to develop
+                tailored strategies that deliver results.
               </motion.p>
             </Box>
           </Box>

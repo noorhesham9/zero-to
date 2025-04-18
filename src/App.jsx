@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "./style.css";
@@ -12,6 +11,8 @@ import AboutUs from "./components/aboutUs/AboutUs";
 import { useEffect, useState } from "react";
 import OurPhilosophy from "./components/OurPhilosophy/OurPhilosophy";
 import LatestProjects from "./components/LatestProjects/LatestProjects";
+import Services from "./components/Servecies/Services";
+import ContactUs from "./components/contactUS/ContactUs";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,9 +50,9 @@ function App() {
         backgroundColor: "#1e1e1e",
       }}
     >
-      <Header sectionNames={sectionNames2} />
+      <Header sectionNames={sectionNames2} slide={`Slide${activeIndex}`} />
       <Swiper
-        className="main-swiper"
+        className={`main-swiper indx${activeIndex}`}
         onSlideChange={(swiper) => {
           setActiveIndex(swiper.activeIndex);
           setVisitedSlides((prev) => new Set(prev).add(swiper.activeIndex));
@@ -69,7 +70,7 @@ function App() {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return `<div class="${className} main-swiperbullets">
+            return `<div class="${className} main-swiperbullets ">
           <div class="dot">
           </div>
           <span class="text">${sectionNames[index]}</span>
@@ -96,11 +97,15 @@ function App() {
             activeIndex={activeIndex}
           />
         </SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>
+          <Services visitedSlides={visitedSlides} activeIndex={activeIndex} />
+        </SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>
+          <ContactUs visitedSlides={visitedSlides} activeIndex={activeIndex} />
+        </SwiperSlide>
       </Swiper>
-      <Footer />
+      <Footer slide={`Slide${activeIndex}`} />
     </div>
   );
 }

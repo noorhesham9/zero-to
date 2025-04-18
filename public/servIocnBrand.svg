@@ -1,0 +1,1013 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 32.8 25.6" style="enable-background:new 0 0 32.8 25.6;" xml:space="preserve">
+    <style type="text/css">
+        .st0 {
+            fill: url(#SVGID_1_);
+        }
+
+        .st1 {
+            fill: url(#SVGID_00000032645207313997542080000010401250209227875493_);
+        }
+
+        .st2 {
+            opacity: 0.6;
+            clip-path: url(#SVGID_00000009588519435634443450000000408246379611407804_);
+            fill: url(#SVGID_00000114772651711764637460000011704437930618779287_);
+            enable-background: new;
+        }
+
+        .st3 {
+            opacity: 0.6;
+            clip-path: url(#SVGID_00000158743976096682033840000001990238424029454271_);
+            fill: url(#SVGID_00000145043306211541127970000011010436750095884453_);
+            enable-background: new;
+        }
+
+        .st4 {
+            opacity: 0.4;
+            fill: #FFEEAB;
+            enable-background: new;
+        }
+
+        .st5 {
+            display: none;
+        }
+
+        .st6 {
+            display: inline;
+            fill: #FF8D00;
+        }
+
+        .st7 {
+            display: none;
+            opacity: 0.3;
+        }
+
+        .st8 {
+            display: inline;
+            fill: none;
+            stroke: #000000;
+            stroke-width: 15;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st9 {
+            display: none;
+            opacity: 0.3;
+            enable-background: new;
+        }
+
+        .st10 {
+            display: inline;
+        }
+
+        .st11 {
+            fill: #FFAE33;
+        }
+
+        .st12 {
+            display: inline;
+            fill: #DCAE33;
+        }
+
+        .st13 {
+            display: inline;
+            opacity: 0.2;
+        }
+
+        .st14 {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 15;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st15 {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 20;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st16 {
+            display: none;
+            fill: none;
+            stroke: #000000;
+            stroke-width: 20;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st17 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000125561629624500806780000017239837620368992943_);
+        }
+
+        .st18 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000063617738554789793110000012603579317284207522_);
+        }
+
+        .st19 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000062167578510343609350000001754184661942235567_);
+        }
+
+        .st20 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #80214F;
+        }
+
+        .st21 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #54214F;
+        }
+
+        .st22 {
+            opacity: 0.5;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #F0EEEF;
+            enable-background: new;
+        }
+
+        .st23 {
+            opacity: 0.5;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000058551579849486178580000009609875693289891000_);
+            enable-background: new;
+        }
+
+        .st24 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #FFFFFF;
+        }
+
+        .st25 {
+            fill: #FF8D00;
+        }
+
+        .st26 {
+            display: inline;
+            opacity: 0.41;
+        }
+
+        .st27 {
+            fill: #DCA90B;
+        }
+
+        .st28 {
+            opacity: 0.1;
+        }
+
+        .st29 {
+            fill: #1D1D1B;
+        }
+
+        .st30 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000044889876116608107660000008593737066314507659_);
+        }
+
+        .st31 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000096779357894415656830000001651986998353206921_);
+        }
+
+        .st32 {
+            fill: #83003E;
+        }
+
+        .st33 {
+            opacity: 0.45;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #791B36;
+            enable-background: new;
+        }
+
+        .st34 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000047020606480864835560000000017212515511467185_);
+        }
+
+        .st35 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000126282918873253785160000018216689060477884043_);
+        }
+
+        .st36 {
+            fill: url(#SVGID_00000178188831172134472510000010545021262147267768_);
+        }
+
+        .st37 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000158707980383148843980000018276167084360881595_);
+        }
+
+        .st38 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000152975832827028634180000009946542562345341836_);
+        }
+
+        .st39 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000114786665061464914250000011005962651875874951_);
+        }
+
+        .st40 {
+            fill: #5E3075;
+        }
+
+        .st41 {
+            opacity: 0.5;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000140697620136858034890000002118278458439824526_);
+            enable-background: new;
+        }
+
+        .st42 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000023260445658192885200000009107319407711839659_);
+        }
+
+        .st43 {
+            opacity: 0.5;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #5656A6;
+            enable-background: new;
+        }
+
+        .st44 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #D3D2DC;
+        }
+
+        .st45 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000064322066313515866090000006330880795918473112_);
+        }
+
+        .st46 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000147220872624082377940000007231767777782458005_);
+        }
+
+        .st47 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000175294952042800833300000010146917277643188615_);
+        }
+
+        .st48 {
+            opacity: 0.3;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #5C1748;
+            enable-background: new;
+        }
+
+        .st49 {
+            fill: #A62A43;
+        }
+
+        .st50 {
+            fill: url(#SVGID_00000052787911445238485490000016297097464992142476_);
+        }
+
+        .st51 {
+            fill: url(#SVGID_00000083088662698558543410000018445371797857110170_);
+        }
+
+        .st52 {
+            fill: url(#SVGID_00000018204782884084475080000006881568018970879128_);
+        }
+
+        .st53 {
+            fill: url(#SVGID_00000172425866293749889590000003745503646433151652_);
+        }
+
+        .st54 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000031908061483761971050000006332686303234437560_);
+        }
+
+        .st55 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000152960808368171596740000014088877871726438788_);
+        }
+
+        .st56 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000129922362631788657430000005703449519546200493_);
+        }
+
+        .st57 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000119088505446777451030000011723430731482761402_);
+        }
+
+        .st58 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000106125608309998802350000001735457203925691547_);
+        }
+
+        .st59 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000059305256305047734110000009157433097332820882_);
+        }
+
+        .st60 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000108306156723172948800000008247551141558553760_);
+        }
+
+        .st61 {
+            fill: url(#SVGID_00000167370125080642916980000006026511664856314504_);
+        }
+
+        .st62 {
+            fill: #B2D5FF;
+        }
+
+        .st63 {
+            fill: url(#SVGID_00000156589387473680310230000018383050405494297242_);
+        }
+
+        .st64 {
+            fill: url(#SVGID_00000075879540123410197770000008518077601755231907_);
+        }
+
+        .st65 {
+            fill: url(#SVGID_00000049208456070796500510000010247570699083257524_);
+        }
+
+        .st66 {
+            fill: url(#SVGID_00000068669970941136704850000000101186354276753057_);
+        }
+
+        .st67 {
+            fill: #361480;
+        }
+
+        .st68 {
+            fill: url(#SVGID_00000046304093021603430860000007941246848501644437_);
+        }
+
+        .st69 {
+            fill: url(#SVGID_00000174587008304114441400000005261002997183296956_);
+        }
+
+        .st70 {
+            fill: url(#SVGID_00000096772527592104560630000015573312157079758729_);
+        }
+
+        .st71 {
+            fill: url(#SVGID_00000050637742197563439350000016491253920410456709_);
+        }
+
+        .st72 {
+            fill: url(#SVGID_00000160175458736185940610000004289391564668962454_);
+        }
+
+        .st73 {
+            fill: #8775B7;
+        }
+
+        .st74 {
+            fill: #6EFFDD;
+        }
+
+        .st75 {
+            fill: #8094FF;
+        }
+
+        .st76 {
+            fill: #6877FF;
+        }
+
+        .st77 {
+            fill: #FF1D91;
+        }
+
+        .st78 {
+            fill: #8D1380;
+        }
+
+        .st79 {
+            fill: #140047;
+        }
+
+        .st80 {
+            fill: url(#SVGID_00000012463038081509938110000007325979192171509911_);
+        }
+
+        .st81 {
+            fill: #FFFFFF;
+        }
+
+        .st82 {
+            fill: url(#SVGID_00000079468556238474550170000014671007957122631067_);
+        }
+
+        .st83 {
+            fill: url(#SVGID_00000037686051097356775710000008667685703256236214_);
+        }
+
+        .st84 {
+            fill: url(#SVGID_00000072267627611747218850000002834869685816685443_);
+        }
+
+        .st85 {
+            fill: url(#SVGID_00000090999607181181393830000006203925563158241186_);
+        }
+
+        .st86 {
+            fill: url(#SVGID_00000046316335783561025780000007103608897225414038_);
+        }
+
+        .st87 {
+            fill: url(#SVGID_00000105398710100045697170000005859045976275988650_);
+        }
+
+        .st88 {
+            fill: url(#SVGID_00000103972296373108610580000002237497869424848515_);
+        }
+
+        .st89 {
+            fill: #4F31D5;
+        }
+
+        .st90 {
+            fill: url(#SVGID_00000170261773109477042510000006080013524997676178_);
+        }
+
+        .st91 {
+            fill: url(#SVGID_00000031175438232758194480000010273192128565777341_);
+        }
+
+        .st92 {
+            fill: url(#SVGID_00000103235891209076147130000002963358927481218695_);
+        }
+
+        .st93 {
+            fill: url(#SVGID_00000167374719897434141180000004993733041198791567_);
+        }
+
+        .st94 {
+            opacity: 0.86;
+            fill: #8F7AA8;
+            enable-background: new;
+        }
+
+        .st95 {
+            fill: url(#SVGID_00000042695252775578833680000012717727077812882565_);
+        }
+
+        .st96 {
+            fill: url(#SVGID_00000183240146363032676010000008879034712172386956_);
+        }
+
+        .st97 {
+            fill: url(#SVGID_00000140725932014626495020000005804762345050888076_);
+        }
+
+        .st98 {
+            opacity: 0.5;
+            fill: url(#SVGID_00000137835208945293652690000013965113136391294888_);
+            enable-background: new;
+        }
+
+        .st99 {
+            fill: url(#SVGID_00000003784804552527196970000014875019839283594919_);
+        }
+
+        .st100 {
+            fill: url(#SVGID_00000087414606236622541210000006930735910584660923_);
+        }
+
+        .st101 {
+            fill: url(#SVGID_00000106834734167516453400000003352800815053029815_);
+        }
+
+        .st102 {
+            fill: url(#SVGID_00000042003248784456353570000006158541521602096555_);
+        }
+
+        .st103 {
+            fill: url(#SVGID_00000060752936362372526900000010998273401013752219_);
+        }
+
+        .st104 {
+            fill: url(#SVGID_00000045585304218211973770000008643102680983067015_);
+        }
+
+        .st105 {
+            fill: url(#SVGID_00000034789707698867376950000005240175527491679166_);
+        }
+
+        .st106 {
+            opacity: 0.86;
+            fill: #8F7ACE;
+            enable-background: new;
+        }
+
+        .st107 {
+            fill: url(#SVGID_00000023976167703808320290000007578303910968247966_);
+        }
+
+        .st108 {
+            fill: url(#SVGID_00000085955047336204120480000000725877628615697808_);
+        }
+
+        .st109 {
+            fill: #D6C68C;
+        }
+
+        .st110 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000008143361728495353550000017800753418752044210_);
+        }
+
+        .st111 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000091015790169221476690000004177057111758659996_);
+        }
+
+        .st112 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000085231338762701230780000016696414318092638394_);
+        }
+
+        .st113 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #9B8AC4;
+        }
+
+        .st114 {
+            opacity: 0.2;
+        }
+
+        .st115 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000116222794087666880430000011703829468922908043_);
+        }
+
+        .st116 {
+            fill: #FF4F4A;
+        }
+
+        .st117 {
+            fill: #11132D;
+        }
+
+        .st118 {
+            opacity: 0.3;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000119805145397173408810000005415868647610529414_);
+            enable-background: new;
+        }
+
+        .st119 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000173842852994856622810000018083000500152848525_);
+        }
+
+        .st120 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000070797395479230070120000000356409098666678426_);
+        }
+
+        .st121 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000096738182700215425410000007353231674482468268_);
+        }
+
+        .st122 {
+            opacity: 0.5;
+        }
+
+        .st123 {
+            display: inline;
+            opacity: 0.3;
+            fill: none;
+            stroke: #FF8D00;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+            stroke-dasharray: 5, 12;
+            enable-background: new;
+        }
+
+        .st124 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000026848939919116672290000009740565561296022927_);
+        }
+
+        .st125 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000055684764860836588010000015741094501641001662_);
+        }
+
+        .st126 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000038389270711621354760000014783918200509377952_);
+        }
+
+        .st127 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000171715979025692490580000015485584109901856671_);
+        }
+
+        .st128 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000065770956326276625220000004331605676752355252_);
+        }
+
+        .st129 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000176017619797284770570000016733231939061651086_);
+        }
+
+        .st130 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000060012082557327402730000008953371251868466866_);
+            enable-background: new;
+        }
+
+        .st131 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000072997345037474201170000009663578347859581617_);
+            enable-background: new;
+        }
+
+        .st132 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000060011532453509786200000016797293028923814827_);
+            enable-background: new;
+        }
+
+        .st133 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000111883350327236057170000015792722376212806316_);
+            enable-background: new;
+        }
+
+        .st134 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000175303576195585940690000007769991174588372113_);
+            enable-background: new;
+        }
+
+        .st135 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000170996898411763796490000004083984279927726993_);
+            enable-background: new;
+        }
+
+        .st136 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000128469895382332832500000004782169237046212026_);
+        }
+
+        .st137 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000137841605958612136750000009041175258200936839_);
+        }
+
+        .st138 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000047045005669117165210000010083642023156855440_);
+        }
+
+        .st139 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000045616262333309658990000007701675282932746421_);
+        }
+
+        .st140 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000137818077104118103280000002303526724670122114_);
+        }
+
+        .st141 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000126314759521696322880000002779619099326083774_);
+        }
+
+        .st142 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000118392681774268867760000006262121110210400935_);
+        }
+
+        .st143 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000016064345124155574460000004300475908872854147_);
+        }
+
+        .st144 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000061467049407588517210000017898233091888841893_);
+        }
+
+        .st145 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000124855057948240949840000004621690250637679537_);
+        }
+
+        .st146 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000029761236353001821500000005312289172945837454_);
+        }
+
+        .st147 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000135648885524788789270000010366037523475490979_);
+        }
+
+        .st148 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #0ED0FF;
+        }
+
+        .st149 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000158729548450900729710000009020048218601688242_);
+        }
+
+        .st150 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000029762592107392692340000003285110190502463421_);
+        }
+
+        .st151 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000105421216237068397850000002268885307160946619_);
+        }
+
+        .st152 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000181803050709355847430000010571902449723345333_);
+        }
+
+        .st153 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000154427818621288236690000009027207986304005536_);
+        }
+
+        .st154 {
+            opacity: 0.4;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000011739364915234360600000004648756567461554349_);
+            enable-background: new;
+        }
+
+        .st155 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000107555747820520033360000013195866586879631035_);
+        }
+
+        .st156 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000021820799651904311680000017693875283708118166_);
+        }
+
+        .st157 {
+            enable-background: new;
+        }
+
+        .st158 {
+            fill: url(#SVGID_00000062899174492189541060000000829273182979419291_);
+        }
+
+        .st159 {
+            fill: url(#SVGID_00000074403412885263874060000014772971908982274235_);
+        }
+
+        .st160 {
+            fill: url(#SVGID_00000070829695744788330530000000511516144160432024_);
+        }
+
+        .st161 {
+            fill: url(#SVGID_00000036245067737984045740000007012182838621530040_);
+        }
+
+        .st162 {
+            clip-path: url(#SVGID_00000173156940666035418670000007930033404465999245_);
+        }
+
+        .st163 {
+            fill: none;
+            stroke: #926916;
+            stroke-width: 0.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st164 {
+            clip-path: url(#SVGID_00000146457485617086971900000011213800615528419729_);
+        }
+
+        .st165 {
+            clip-path: url(#SVGID_00000111160479643493265250000003247681190216491452_);
+        }
+
+        .st166 {
+            clip-path: url(#SVGID_00000093151256200484798190000016863381887243234949_);
+        }
+
+        .st167 {
+            clip-path: url(#SVGID_00000068636639461867584440000015635028763561984656_);
+        }
+
+        .st168 {
+            clip-path: url(#SVGID_00000133501145186255458430000004274003591561303193_);
+        }
+
+        .st169 {
+            clip-path: url(#SVGID_00000058571196228392426230000011990846551761989522_);
+        }
+
+        .st170 {
+            display: inline;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: url(#SVGID_00000179638479357156464300000018389087632617770635_);
+        }
+    </style>
+    <symbol id="dont" viewBox="-13 -12.4 26 24.8">
+
+        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-8.9" y1="-22.4703" x2="-8.9" y2="-4.7174"
+            gradientTransform="matrix(1 0 0 1 13 12.4)">
+            <stop offset="0.206" style="stop-color:#AF6B1C"></stop>
+            <stop offset="0.8066" style="stop-color:#DE8025"></stop>
+        </linearGradient>
+        <path class="st0" d="M13-1.2c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9s4,8.9,8.9,8.9C9.1,7.7,13,3.7,13-1.2z">
+        </path>
+
+        <linearGradient id="SVGID_00000098210981233927852720000012154091406075879602_" gradientUnits="userSpaceOnUse"
+            x1="-11" y1="-22.4703" x2="-11" y2="-4.7174" gradientTransform="matrix(1 0 0 1 13 12.4)">
+            <stop offset="0" style="stop-color:#EB8D2B"></stop>
+            <stop offset="0.3053" style="stop-color:#F1AA41"></stop>
+            <stop offset="1" style="stop-color:#FFE972"></stop>
+        </linearGradient>
+        <path style="fill:url(#SVGID_00000098210981233927852720000012154091406075879602_);" d="M10.9-1.2c0-4.9-4-8.9-8.9-8.9
+		s-8.9,4-8.9,8.9s4,8.9,8.9,8.9S10.9,3.7,10.9-1.2z"></path>
+        <g>
+            <g>
+                <defs>
+                    <circle id="SVGID_00000078730251060051709590000016307892978455678396_" cx="2" cy="-1.2" r="8.9">
+                    </circle>
+                </defs>
+                <clipPath id="SVGID_00000104678926641600267210000004013340041606261651_">
+                    <use xlink:href="#SVGID_00000078730251060051709590000016307892978455678396_"
+                        style="overflow:visible;"></use>
+                </clipPath>
+
+                <linearGradient id="SVGID_00000110464169220217152580000006988059369790908068_"
+                    gradientUnits="userSpaceOnUse" x1="-2199.6924" y1="-3452.1326" x2="-2191.5264" y2="-3455.1323"
+                    gradientTransform="matrix(0.9768 -0.2145 0.2144 0.9768 2882.5452 2902.5085)">
+                    <stop offset="0" style="stop-color:#FFFF1D"></stop>
+                    <stop offset="0.2406" style="stop-color:#FFFF5D;stop-opacity:0.7328"></stop>
+                    <stop offset="0.7955" style="stop-color:#FFFFFB;stop-opacity:0.1162"></stop>
+                    <stop offset="0.8101" style="stop-color:#FFFFFF;stop-opacity:0.1"></stop>
+                </linearGradient>
+
+                <polygon
+                    style="opacity:0.6;clip-path:url(#SVGID_00000104678926641600267210000004013340041606261651_);fill:url(#SVGID_00000110464169220217152580000006988059369790908068_);enable-background:new    ;"
+                    points="
+				-5.7,-12.4 -13,-7.5 0.4,12.4 7.7,7.5 			"></polygon>
+            </g>
+            <g>
+                <defs>
+                    <circle id="SVGID_00000061461948764184532410000004408863343442833086_" cx="2" cy="-1.2" r="8.9">
+                    </circle>
+                </defs>
+                <clipPath id="SVGID_00000148622405848010788260000005664129684483494287_">
+                    <use xlink:href="#SVGID_00000061461948764184532410000004408863343442833086_"
+                        style="overflow:visible;"></use>
+                </clipPath>
+
+                <linearGradient id="SVGID_00000078017107273010517660000011603990006024967613_"
+                    gradientUnits="userSpaceOnUse" x1="-18263.7773" y1="3228.1277" x2="-18255.6113" y2="3225.1277"
+                    gradientTransform="matrix(0.5696 -1.720000e-02 0.269 0.7463 9534.2402 -2723.3184)">
+                    <stop offset="0" style="stop-color:#FFFF1D"></stop>
+                    <stop offset="0.2969" style="stop-color:#FFFF5D;stop-opacity:0.7031"></stop>
+                    <stop offset="0.982" style="stop-color:#FFFFFB;stop-opacity:1.801896e-02"></stop>
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"></stop>
+                </linearGradient>
+
+                <polygon
+                    style="opacity:0.6;clip-path:url(#SVGID_00000148622405848010788260000005664129684483494287_);fill:url(#SVGID_00000078017107273010517660000011603990006024967613_);enable-background:new    ;"
+                    points="
+				-2.2,-10.7 -6,-8.2 5.1,8.3 8.9,5.8 			"></polygon>
+            </g>
+        </g>
+        <path class="st4" d="M2,7.7c-2.5,0-4.8-1.1-6.4-2.8c1.6,1.5,3.7,2.5,6.1,2.5c4.9,0,8.9-4,8.9-8.9c0-2.4-0.9-4.5-2.5-6.1
+		c1.7,1.6,2.8,3.9,2.8,6.4C10.9,3.7,6.9,7.7,2,7.7z"></path>
+    </symbol>
+    <g>
+        <g>
+            <path class="st163" d="M25,9.7h2.2V7.3H25h2.2V4.8v5.2h2.1V9.8h1.8c0,0,0.7,0,1-0.3c0.4-0.4,0.3-0.9,0.3-0.9V6
+			c0,0,0.1-0.4-0.4-0.9c-0.4-0.3-0.9-0.3-0.9-0.3h-1.8v4.9V4.2h-2.1v0.6H25"></path>
+            <polyline class="st163"
+                points="8.9,4.8 5.1,4.8 5.2,7.3 10.4,7.4 5.2,7.3 5.2,9.7 5.1,4.8 0.3,7.2 5.2,9.7 21,9.7 		">
+            </polyline>
+            <line class="st163" x1="7.1" y1="25.3" x2="24.9" y2="25.3"></line>
+            <path class="st163" d="M7.1,25.3h2.3v-4.9h12.4v4.9h3.1c0,0-13.2,0-15.2,0C9.5,25.3,7.1,25.3,7.1,25.3z">
+            </path>
+            <path class="st163" d="M18,12.8c0-0.5,0.1-1.1,0.8-1.9c0.7-0.8,2.2-1.2,2.2-1.2V7.1c0,0,0-2.9,0-4.4s-1-1.7-1.4-1.7
+			c-1.4,0-1.7,1-1.7,1v2.7c0,0,0,2,0,2.4c-0.2,1.3-1.5,1.3-1.5,1.3c-1.5,0-1.6-1.4-1.6-1.8s0-3,0-4.2s-1.2-1.5-1.6-1.5
+			c-1.5,0-1.4,2-1.4,2s0,1.9,0,2.9S11,7.3,10.3,7.3c-1.2,0-1.6-1.2-1.6-1.2V4.8c-0.1-1.5,0.2-2.5,1.5-2.5s1.6,1,1.6,1s0,0.7,0,2.5
+			s1,2.1,1.5,2.1c1.1,0,1.5-1,1.5-1s0-3.6,0-4.8s0.9-1.7,1.6-1.7c1.3,0,1.6,1.4,1.5,1.4c0,0,0,2.9,0,4.3s1.1,1.7,1.6,1.7
+			c1.1,0,1.4-0.9,1.4-0.9s0-1.5,0-2.9c0-2.1,1.7-2.3,1.9-2.3c1.8,0,2,2,2,2s0,5,0,5.8c0,0.4-0.2,1.4-0.3,1.9c-0.5,1.3-1.4,2-1.8,2.5
+			S21,15.6,21,15.6v4.5H10.1c0,0,0-2.3,0-2.8s-0.2-2.2-0.6-3.6s-1-2.7-0.7-4.3c1,0,10.6-0.1,12.3-0.1"></path>
+        </g>
+    </g>
+</svg>

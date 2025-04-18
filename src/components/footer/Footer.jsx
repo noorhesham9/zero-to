@@ -8,17 +8,17 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box } from "@mui/material";
 import React from "react";
-
-function Footer() {
+import "./footer.css";
+function Footer({ slide }) {
   return (
     <div
+      className={`Footer ${slide}`}
       style={{
         position: "fixed",
         bottom: 0,
         left: 0,
         width: "100%",
         height: "50px",
-        color: "#fff",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -75,7 +75,6 @@ function Footer() {
             },
             fontSize: "14px",
             fontWeight: "bold",
-            color: "#fff",
           }}
         >
           &copy;2025{" "}
@@ -100,7 +99,6 @@ function Footer() {
             href="#"
             style={{
               textDecoration: "none",
-              color: "#fff",
             }}
           >
             <FontAwesomeIcon
@@ -114,7 +112,6 @@ function Footer() {
             href="#"
             style={{
               textDecoration: "none",
-              color: "#fff",
             }}
           >
             <FontAwesomeIcon
@@ -128,7 +125,6 @@ function Footer() {
             href="#"
             style={{
               textDecoration: "none",
-              color: "#fff",
             }}
           >
             <FontAwesomeIcon
@@ -142,7 +138,6 @@ function Footer() {
             href="#"
             style={{
               textDecoration: "none",
-              color: "#fff",
             }}
           >
             <FontAwesomeIcon
@@ -156,7 +151,6 @@ function Footer() {
             href="#"
             style={{
               textDecoration: "none",
-              color: "#fff",
             }}
           >
             <FontAwesomeIcon
@@ -164,7 +158,7 @@ function Footer() {
                 fontSize: "20px",
               }}
               icon={faTwitter}
-            />{" "}
+            />
           </a>
         </Box>
       </Box>

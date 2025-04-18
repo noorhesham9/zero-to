@@ -1,6 +1,6 @@
 .swiper-pagination-bullet.projects-swiperbullets {
   width: fit-content;
-  height: 32px;
+  height: fit-content;
   text-align: center;
   line-height: 20px;
   font-size: 12px;
@@ -13,37 +13,42 @@
   position: relative;
   cursor: pointer;
 }
+
 .swiper-projects {
   > .swiper-pagination {
     bottom: 0px !important;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
-  height: 380px;
+  /* height: 380px; */
   margin: 0;
   @media (min-width: 1200px) {
-    min-width: 350px;
-    width: 350px;
-    height: 330px;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
   }
   @media (max-width: 1200px) and (min-width: 998px) {
-    min-width: 350px;
-    width: 350px;
-    height: 330px;
+    min-width: 290px;
+    width: 290px;
+    height: 290px;
   }
   @media (max-width: 998px) and (min-width: 776px) {
-    min-width: 300px;
-    width: 300px;
-    height: 320px;
+    min-width: 290px;
+    width: 290px;
+    height: 290px;
   }
   @media (max-width: 776px) {
-    min-width: 300px;
-    width: 300px;
+    min-width: 250px;
+    width: 250px;
     height: auto;
     aspect-ratio: 1;
   }
   @media (max-width: 450px) {
     min-width: 0px;
-    width: 300px;
+    width: 200px;
     height: auto;
     aspect-ratio: 1;
     max-width: calc(100% - 20px);
@@ -68,4 +73,13 @@
 }
 .swiper-projects {
   border: 10px solid white !important;
+  border-radius: 5px;
+}
+.SLideDescription {
+  font-size: 15px;
+}
+@media (max-width: 430px) {
+  .SLideDescription {
+    font-size: 13px;
+  }
 }
