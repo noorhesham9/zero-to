@@ -53,7 +53,7 @@ const BubblesScreenSaver = () => {
 
   useEffect(() => {
     const letters = ["Z", "E", "R", "O", "T"];
-    const logoBubble = createBubble("/Zero-To logo.svg", true); // path to your logo image
+    const logoBubble = createBubble("/Zero-To-logo.svg", true); // path to your logo image
     const initial = [...letters.map((char) => createBubble(char)), logoBubble];
     setBubbles(initial);
   }, []);

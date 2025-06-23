@@ -50,7 +50,7 @@ const ArcProgress = ({
   );
 };
 
-const NetflixDeepZoom = ({ isLoading }) => {
+const NetflixDeepZoom = ({ startIntro }) => {
   const [visible, setVisible] = React.useState(false);
   const [Size, setSize] = useState(600);
 
@@ -62,10 +62,12 @@ const NetflixDeepZoom = ({ isLoading }) => {
   }, []);
 
   React.useEffect(() => {
-    if (!isLoading) {
+    if (startIntro) {
       setVisible(true);
+    } else {
+      setVisible(false);
     }
-  }, [isLoading]);
+  }, [startIntro]);
 
   useEffect(() => {
     const widthofWindow = window.innerWidth;
@@ -74,73 +76,72 @@ const NetflixDeepZoom = ({ isLoading }) => {
     widthofWindow <= 400 && setSize(300);
     console.log(Size + "===" + widthofWindow);
   }, [Size]);
-  if (!visible) return null;
-
-  return (
-    <motion.div
-      initial={{ opacity: 1, scale: 1 }}
-      animate={{ opacity: 0, scale: 150 }}
-      transition={{
-        delay: 4.5,
-        duration: 3,
-        ease: "easeInOut",
-        opacity: {
-          duration: 1.5,
+  if (visible)
+    return (
+      <motion.div
+        initial={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 0, scale: 150 }}
+        transition={{
+          delay: 4.5,
+          duration: 3,
           ease: "easeInOut",
-          delay: 6,
-        },
-      }}
-      className={`deep-zoom-container`}
-    >
-      {ArcProgress({
-        percentage: 35,
-        speed: 1.1,
-        rotate: 95,
-        size: Size - 200,
-        strokeWidth: 2,
-        color: "#998055",
-        x: 0,
-        y: 0,
-      })}
-      {ArcProgress({
-        percentage: 30,
-        rotate: 34,
-        speed: 1.2,
-        size: Size - 100,
-        strokeWidth: 2,
-        color: "#998055",
-        x: 0,
-        y: 0,
-      })}
-      {ArcProgress({
-        percentage: 40,
-        rotate: 10,
-        size: Size,
-        speed: 1,
-        strokeWidth: 2,
-        color: "#998055",
-        x: 0,
-        y: 0,
-      })}
-      <img
-        style={{
-          // width: "100%",
-          // height: "100%",
-          maxWidth: `${Size - 250}px`,
-          maxHeight: `${Size - 250}px`,
-          color: "#998055",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          objectFit: "contain",
-          zIndex: 1,
+          opacity: {
+            duration: 1.5,
+            ease: "easeInOut",
+            delay: 6,
+          },
         }}
-        src="./Zero-To logo wos.svg"
-        alt=""
-      />
-    </motion.div>
-  );
+        className={`deep-zoom-container`}
+      >
+        {ArcProgress({
+          percentage: 35,
+          speed: 1.1,
+          rotate: 95,
+          size: Size - 200,
+          strokeWidth: 2,
+          color: "#998055",
+          x: 0,
+          y: 0,
+        })}
+        {ArcProgress({
+          percentage: 30,
+          rotate: 34,
+          speed: 1.2,
+          size: Size - 100,
+          strokeWidth: 2,
+          color: "#998055",
+          x: 0,
+          y: 0,
+        })}
+        {ArcProgress({
+          percentage: 40,
+          rotate: 10,
+          size: Size,
+          speed: 1,
+          strokeWidth: 2,
+          color: "#998055",
+          x: 0,
+          y: 0,
+        })}
+        <img
+          style={{
+            // width: "100%",
+            // height: "100%",
+            maxWidth: `${Size - 250}px`,
+            maxHeight: `${Size - 250}px`,
+            color: "#998055",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            objectFit: "contain",
+            zIndex: 1,
+          }}
+          src="./Zero-To-logo-wos.svg"
+          alt=""
+        />
+      </motion.div>
+    );
 };
 
 export default NetflixDeepZoom;

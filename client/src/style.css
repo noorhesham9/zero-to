@@ -74,7 +74,7 @@ body {
     background: transparent;
     /* border: 2px solid #fff; */
     /* border-radius: 50%; */
-    background-image: url("./Zero-To logoWhite.svg");
+    background-image: url("/Zero-To-logoWhite.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -108,7 +108,7 @@ body {
   .swiper-pagination-bullet-active.main-swiperbullets .dot {
     width: 10px;
     height: 10px;
-    background-image: url("./Zero-To logo wos.svg");
+    background-image: url("/Zero-To-logo-wos.svg");
   }
 
   .main-swiperbullets.swiper-pagination-bullet:not(:nth-child(7))

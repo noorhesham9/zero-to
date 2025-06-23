@@ -23,13 +23,23 @@ function App() {
   const [visitedSlides, setVisitedSlides] = useState(new Set()); // Store visited slides
   const [isLoading, setIsLoading] = useState(true);
   const [startIntro, setStartIntro] = useState(false);
-  window.addEventListener("load", () => {
-    setStartIntro(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  });
 
+  useEffect(() => {
+    const handleLoad = () => {
+      setStartIntro(true);
+      console.log("start intro");
+      setTimeout(() => {
+        setIsLoading(false);
+        console.log("end loading");
+      }, 500);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
   const sectionNames = [
     "HOME",
     "ABOUT US",
@@ -70,7 +80,7 @@ function App() {
       }}
     >
       {isLoading && <Loading />}
-      <Intro isLoading={startIntro} />
+      <Intro startIntro={startIntro} />
       <Header
         goToSlide={goToSlide}
         sectionNames={sectionNames2}

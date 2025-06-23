@@ -85,7 +85,7 @@ function Loading() {
           </div>
         </div>
 
-        <img className="logo" src="/Zero-To logo wos.svg" alt="Logo" />
+        <img className="logo" src="/Zero-To-logo-wos.svg" alt="Logo" />
       </div>
       <div className="quote-container">
         <p className="quote-text"> &quot;{randomQuote.quote}&quot;</p>
