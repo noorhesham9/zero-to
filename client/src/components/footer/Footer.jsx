@@ -96,7 +96,8 @@ function Footer({ slide }) {
           }}
         >
           <a
-            href="#"
+            href="https://web.facebook.com/ZER0.T0"
+            target="_blank"
             style={{
               textDecoration: "none",
             }}
@@ -109,7 +110,8 @@ function Footer({ slide }) {
             />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/zeroto.marketing.agency"
+            target="_blank"
             style={{
               textDecoration: "none",
             }}

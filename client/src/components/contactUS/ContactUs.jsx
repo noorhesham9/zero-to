@@ -50,7 +50,7 @@ function ContactUs({ activeIndex, visitedSlides }) {
     <Box
       className="ContactUsBox"
       sx={{
-        backgroundImage: "url('./backgroundContact.webp')",
+        backgroundImage: "url('./backgroundContact-min.jpg')",
         height: "100%",
         width: "100%",
         display: "flex",

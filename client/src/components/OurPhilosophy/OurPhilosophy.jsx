@@ -9,7 +9,13 @@ function OurPhilosophy({ activeIndex, visitedSlides }) {
   return (
     <Box
       sx={{
-        backgroundImage: "url('./backgroundPhio.svg')",
+        backgroundImage: "url('./backgroundPhio-min.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundColor: "#000",
+
         height: "100%",
         width: "100%",
         display: "flex",
@@ -129,41 +135,6 @@ function OurPhilosophy({ activeIndex, visitedSlides }) {
           </Box>
         </AnimatePresence>
       </Container>
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          opacity: 0.3,
-          height: "100%",
-        }}
-      >
-        <img
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-          src="./backabout2.svg"
-          alt=""
-        />
-        <img
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-          src="./backabout3.svg"
-          alt=""
-        />
-      </Box>
     </Box>
   );
 }

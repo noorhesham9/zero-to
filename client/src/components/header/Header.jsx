@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import { Box, Container, Typography } from "@mui/material";
+import { Box, duration, Typography } from "@mui/material";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import { useState } from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "./header.css";
 import { useEffect } from "react";
-function Header({ sectionNames }) {
+function Header({ sectionNames, goToSlide }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [num] = useState(60);
@@ -62,12 +62,12 @@ function Header({ sectionNames }) {
 
   const variants = {
     closed: {
-      width: "0px",
+      display: "none",
       opacity: 0,
       transition: { delay: 0.8, duration: 0.5, ease: "easeInOut" },
     },
     open: {
-      width: "300px",
+      display: "flex",
       opacity: 1,
       transition: { delay: 0.35, duration: 0.5, ease: "easeInOut" },
     },
@@ -103,7 +103,7 @@ function Header({ sectionNames }) {
         top: 0,
         left: 0,
         width: "100%",
-        height: "70px",
+        height: "80px",
         background: "#333",
         color: "#fff",
         display: "flex",
@@ -128,8 +128,9 @@ function Header({ sectionNames }) {
             height: "100%",
             cursor: "pointer",
             display: "flex",
+
             padding: "0px 10px",
-            justifyContent: "center",
+            justifyContent: "left",
             alignItems: "center",
           }}
         >
@@ -147,9 +148,8 @@ function Header({ sectionNames }) {
                 borderRadius: "5px",
               },
               position: "relative",
-              // width: "150px",
-              maxHeight: "70px",
-
+              maxHeight: "80px",
+              maxWidth: "100px",
               cursor: "pointer",
               display: "flex",
               padding: "0px 10px",
@@ -158,40 +158,47 @@ function Header({ sectionNames }) {
             }}
           >
             <img
+              loading="lazy"
               style={{
                 width: "100%",
-                maxHeight: "70px",
+                maxHeight: "80px",
               }}
-              src="./Zero-To2.svg"
+              src="./Zero-v.svg"
               alt=""
             />
           </Box>
           <Box
             sx={{
-              marginLeft: "20px",
+              marginLeft: "5px",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
               width: "calc(100% - 150px)",
               height: "100%",
-              "& a": {
+              "& button": {
                 color: "#fff",
                 textDecoration: "none",
               },
-              "& a:hover": {
-                color: "#fb613d",
+              "& button:hover": {
+                color: "var(--secondary-color)",
               },
             }}
           >
-            <a
+            <button
               style={{
+                background: "transparent",
+                border: "0",
+                cursor: "pointer",
                 transition: " 0.3s ease-in-out",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "5px",
               }}
-              href="#Home"
+              // href="#Home"
+              onClick={() => {
+                goToSlide(0);
+              }}
             >
               <HomeRoundedIcon
                 sx={{
@@ -216,7 +223,7 @@ function Header({ sectionNames }) {
               >
                 Home
               </Typography>
-            </a>
+            </button>
           </Box>
         </Box>
         <Box
@@ -230,39 +237,73 @@ function Header({ sectionNames }) {
         >
           <div
             style={{
-              position: "relative",
-              zIndex: 3,
+              cursor: "pointer",
             }}
-            onClick={() => setIsOpen(!isOpen)}
-            className={isOpen ? "open" : ""}
-            id="nav-icon2"
+            className={isOpen ? "container active" : "container"}
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
           >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <svg
+              className="hamburger"
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              viewBox="0 0 200 200"
+            >
+              <g strokeWidth="6.5" strokeLinecap="round">
+                <path
+                  d="M72 82.286h28.75"
+                  fill="#009100"
+                  fillRule="evenodd"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                  fill="none"
+                  stroke="#fff"
+                />
+                <path
+                  d="M72 125.143h28.75"
+                  fill="#009100"
+                  fillRule="evenodd"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                  fill="none"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 82.286h28.75"
+                  fill="#009100"
+                  fillRule="evenodd"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 125.143h28.75"
+                  fill="#009100"
+                  fillRule="evenodd"
+                  stroke="#fff"
+                />
+              </g>
+            </svg>
           </div>
-
           <motion.div
             style={{
-              borderTop: "1px solid #fb613d",
-              borderLeft: "1px solid #fb613d",
-              borderBottom: "1px solid #fb613d",
               position: "absolute",
               top: "0",
               right: "0px",
-              background: "#333",
+              background: "#03202a",
+              textAlign: "center",
               borderRadius: "10px",
               borderTopRightRadius: "0px",
               borderBottomRightRadius: "0px",
               boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-              zIndex: 2,
-
-              width: "300px",
-              height: "calc(100vh - 20px )",
-              margin: "10px auto",
+              zIndex: -1,
+              width: "100%",
+              height: "100vh ",
+              margin: " auto",
               display: "flex",
               justifyContent: "space-evenly",
               alignItems: "center",
@@ -281,11 +322,27 @@ function Header({ sectionNames }) {
               {sectionNames &&
                 sectionNames.map((section, index) => (
                   <motion.a
+                    onClick={() => {
+                      goToSlide(index);
+                      setIsOpen(!isOpen);
+                    }}
+                    style={{
+                      background: "transparent",
+                      border: "0",
+                      cursor: "pointer",
+                    }}
                     animate={isOpen ? "open" : "closed"}
                     transition={{
                       delay: isOpen ? 0.7 + 0.1 * index : 0.1 * index,
                       duration: 0.2,
                       stiffness: 5,
+                      color: {
+                        delay: 0,
+                        duration: 0.2,
+                      },
+                    }}
+                    whileHover={{
+                      color: "var(--secondary-color)",
                     }}
                     variants={variants3}
                     href="#"
@@ -296,8 +353,36 @@ function Header({ sectionNames }) {
                   </motion.a>
                 ))}
             </div>
+            <Box
+              sx={{
+                position: "absolute",
+                zIndex: -1,
+                top: "0",
+                left: "0px",
+                background: "transparent",
+                width: "100%",
+                height: "100vh",
+              }}
+            >
+              <div className="starmopile"></div>
+            </Box>
+            <div className="meteor-1"></div>
+            <div className="meteor-2"></div>
+            <div className="meteor-3"></div>
+            <div className="meteor-4"></div>
+            <div className="meteor-5"></div>
+            <div className="meteor-6"></div>
+            <div className="meteor-7"></div>
+            <div className="meteor-8"></div>
+            <div className="meteor-9"></div>
+            <div className="meteor-10"></div>
+            <div className="meteor-11"></div>
+            <div className="meteor-12"></div>
+            <div className="meteor-13"></div>
+            <div className="meteor-14"></div>
+            <div className="meteor-15"></div>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             variants={variants2}
@@ -332,7 +417,7 @@ function Header({ sectionNames }) {
                 />
               ))}
             </svg>
-          </motion.div>
+          </motion.div> */}
         </Box>
       </Box>
     </div>

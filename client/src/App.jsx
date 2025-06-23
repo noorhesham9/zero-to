@@ -8,26 +8,35 @@ import Home from "./components/home/Home";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import AboutUs from "./components/aboutUs/AboutUs";
-import { useEffect, useState } from "react";
+import { useEffect, useImperativeHandle, useRef, useState } from "react";
 import OurPhilosophy from "./components/OurPhilosophy/OurPhilosophy";
 import LatestProjects from "./components/LatestProjects/LatestProjects";
 import Services from "./components/Servecies/Services";
 import ContactUs from "./components/contactUS/ContactUs";
+import BubblesScreenSaver from "./components/home/BubblesScreenSaver";
+import Intro from "./components/intro/intro";
+import Loading from "./components/Loading/Loading";
+import Pricing from "./components/Pricing/Pricing";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visitedSlides, setVisitedSlides] = useState(new Set()); // Store visited slides
+  const [isLoading, setIsLoading] = useState(true);
+  const [startIntro, setStartIntro] = useState(false);
+  window.addEventListener("load", () => {
+    setStartIntro(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  });
 
-  useEffect(() => {
-    console.log(activeIndex);
-  }, [activeIndex]);
   const sectionNames = [
     "HOME",
     "ABOUT US",
     "PHILOSOPHY",
     "LATEST PROJECTS",
     "SERVICES",
-    "LET'S TALK",
+    "PRICING",
     "CONTACT",
   ];
 
@@ -37,10 +46,20 @@ function App() {
     "Philosophy",
     "Latest Projects",
     "Services",
-    "Let's Talk",
+    "Pricing",
     "Contact",
   ];
-
+  const swiperRef = useRef(null);
+  const goToSlide = (index) => {
+    if (swiperRef.current && swiperRef.current.slideTo) {
+      swiperRef.current.slideTo(index); // 0-based
+    }
+  };
+  // useImperativeHandle(ref, () => ({
+  //   goToSlide: (index) => {
+  //     swiperRef.current?.swiper?.slideTo(index);
+  //   }
+  // }));
   return (
     <div
       style={{
@@ -50,12 +69,22 @@ function App() {
         backgroundColor: "#1e1e1e",
       }}
     >
-      <Header sectionNames={sectionNames2} slide={`Slide${activeIndex}`} />
+      {isLoading && <Loading />}
+      <Intro isLoading={startIntro} />
+      <Header
+        goToSlide={goToSlide}
+        sectionNames={sectionNames2}
+        slide={`Slide${activeIndex}`}
+      />
+
       <Swiper
         className={`main-swiper indx${activeIndex}`}
         onSlideChange={(swiper) => {
           setActiveIndex(swiper.activeIndex);
           setVisitedSlides((prev) => new Set(prev).add(swiper.activeIndex));
+        }}
+        onSwiper={(swiperInstance) => {
+          swiperRef.current = swiperInstance;
         }}
         style={{
           height: "calc(100% - 70px)",
@@ -71,10 +100,12 @@ function App() {
           clickable: true,
           renderBullet: function (index, className) {
             return `<div class="${className} main-swiperbullets ">
-          <div class="dot">
-          </div>
-          <span class="text">${sectionNames[index]}</span>
-          </div>`;
+                        <div class="dot">
+                         <div class="dot2"></div>
+                        </div>
+                       
+                        <span class="text">${sectionNames[index]}</span>
+                    </div>`;
           },
         }}
         modules={[Mousewheel, Pagination]}
@@ -100,7 +131,9 @@ function App() {
         <SwiperSlide>
           <Services visitedSlides={visitedSlides} activeIndex={activeIndex} />
         </SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>
+          <Pricing visitedSlides={visitedSlides} activeIndex={activeIndex} />
+        </SwiperSlide>
         <SwiperSlide>
           <ContactUs visitedSlides={visitedSlides} activeIndex={activeIndex} />
         </SwiperSlide>

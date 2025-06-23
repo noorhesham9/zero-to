@@ -1,0 +1,22 @@
+.deep-zoom-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03202a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+  perspective: 1000px;
+  .SemiCircle {
+    position: absolute;
+
+    /* background: trasnparent; */
+    /* border-radius: 50%; */
+    /* transform-origin: center; */
+    /* border: 1px solid #998055; */
+  }
+}

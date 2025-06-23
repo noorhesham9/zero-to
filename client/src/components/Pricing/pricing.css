@@ -1,0 +1,271 @@
+.contentPricingWrapper {
+  .swiper {
+    display: flex;
+    .swiper-wrapper {
+      align-items: center;
+    }
+    /* min-width: 320px; */
+    /* min-height: 389px; */
+    /* position: relative; */
+
+    .swiper-slide {
+      width: 100%;
+      background-color: hsla(0, 0%, 100%, 0.16);
+      box-shadow: 0px 0px 10px 0px hsl(0deg 0% 100% / 65%);
+      flex-direction: column;
+      text-align: left;
+      justify-content: start;
+      border-radius: 30px;
+      align-items: start;
+      margin: 10px 0px;
+      /* overflow: hidden; */
+
+      > div {
+        position: relative;
+        border-radius: 30px;
+        padding: 15px 15px;
+        overflow: hidden;
+        width: calc(100% - 30px);
+        .imagePricing {
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          top: -34px;
+          right: -34px;
+
+          transform: rotate(40deg);
+        }
+        .descPricing {
+          width: 70%;
+          font-size: 15px;
+          margin: 3px 0px 11px;
+        }
+        @media (max-width: 425px) {
+          .descPricing {
+            width: 90%;
+            font-size: 15px;
+            margin: 3px 0px 11px;
+          }
+          .imagePricing {
+            width: 100px;
+            height: 100px;
+            top: -30px;
+            right: -28px;
+            transform: rotate(40deg);
+          }
+        }
+      }
+
+      .MoonPackage {
+        .priceText {
+          color: #a46deb;
+        }
+        .pricePricing {
+          button {
+            background-color: transparent;
+            background-image: linear-gradient(
+              to right,
+              #ffffff00 15%,
+              #a46deb 60%
+            );
+            border: 2px solid #a46deb;
+          }
+        }
+
+        header {
+          background: linear-gradient(to right, #ffffff 50%, #a286ce 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &::after {
+          content: "";
+          border-radius: 30px;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          box-shadow: -4px -3px 10px 8px #a286ce;
+          z-index: -1;
+        }
+        .Details {
+          div {
+            margin-top: 7px;
+            span {
+              padding: 2px 5px;
+              background-color: hsla(263, 42%, 67%, 0.65);
+              border-radius: 30px;
+              margin-right: 6px;
+              font-weight: 600;
+            }
+            font-size: 14px;
+            margin: 10px 0px;
+          }
+        }
+      }
+
+      .MarsPackage {
+        .priceText {
+          color: var(--secondary-color);
+        }
+        .pricePricing {
+          button {
+            background-color: transparent;
+            background-image: linear-gradient(
+              to right,
+              #ffffff00 15%,
+              var(--secondary-color) 60%
+            );
+            border: 2px solid var(--secondary-color);
+          }
+        }
+
+        header {
+          background: linear-gradient(
+            to right,
+            #ffffff 50%,
+            var(--secondary-color) 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &::after {
+          content: "";
+          border-radius: 30px;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          box-shadow: -4px -3px 10px 8px var(--secondary-color);
+          z-index: -1;
+        }
+        .Details {
+          div {
+            margin-top: 7px;
+            span {
+              padding: 2px 5px;
+              background-color: var(--secondary-color);
+              border-radius: 30px;
+              margin-right: 6px;
+              font-weight: 600;
+            }
+            font-size: 14px;
+            margin: 10px 0px;
+          }
+        }
+      }
+      .jupiterPackage {
+        .priceText {
+          color: white;
+        }
+        .pricePricing {
+          button {
+            background-color: transparent;
+            background-image: linear-gradient(
+              to right,
+              #ffffff00 25%,
+              rgba(226, 226, 226, 0.7) 80%
+            );
+            border: 2px solid rgba(226, 226, 226, 0.7);
+          }
+        }
+
+        header {
+          background: linear-gradient(to right, #ffffff 50%, #4e4e4e 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &::after {
+          content: "";
+          border-radius: 30px;
+          width: calc(100% - 1px);
+          height: calc(100% - 1px);
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          box-shadow: -4px -3px 10px 8px white;
+          z-index: -1;
+        }
+        .Details {
+          div {
+            margin-top: 7px;
+            span {
+              padding: 2px 5px;
+              background-color: white;
+              border-radius: 30px;
+              margin-right: 6px;
+              font-weight: 600;
+            }
+            font-size: 14px;
+            margin: 10px 0px;
+          }
+        }
+      }
+    }
+
+    /* &::after {
+      content: "";
+      position: absolute;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: -10%;
+      right: -10%;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.25);
+    } */
+
+    header {
+      letter-spacing: 1.5px;
+      font-size: 29px;
+      font-family: "Boldonse", system-ui;
+      font-weight: 600;
+      width: fit-content;
+    }
+    @media (max-width: 425px) {
+      header {
+        font-size: 23px;
+      }
+    }
+    .pricePricing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      button {
+        cursor: pointer;
+        padding: 9px 20px;
+        font-size: 14px;
+        letter-spacing: 0.9px;
+        font-weight: 700;
+        border-radius: 40px;
+        color: white;
+      }
+
+      .priceText {
+        span {
+          font-size: 13px;
+          font-weight: 600;
+          color: white;
+        }
+        font-size: 18px;
+        font-weight: 700;
+      }
+      @media (max-width: 425px) {
+        button {
+          padding: 9px 14px;
+        }
+        .priceText {
+          span {
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+          }
+          font-size: 13px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

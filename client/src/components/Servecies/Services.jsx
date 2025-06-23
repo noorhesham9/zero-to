@@ -191,7 +191,7 @@ function Services({ activeIndex, visitedSlides }) {
                 }}
                 viewport={{ once: true }}
                 sx={{
-                  border: "1px solid #926916",
+                  border: "1px solid var(--secondary-color)",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-start",
@@ -230,7 +230,7 @@ function Services({ activeIndex, visitedSlides }) {
                   />
                   <Box
                     sx={{
-                      color: "#926916",
+                      color: "var(--secondary-color)",
                       opacity: 0.8,
                       padding: "10px",
                       fontSize: "20px",
@@ -260,7 +260,7 @@ function Services({ activeIndex, visitedSlides }) {
                 </Box>
                 <Box
                   sx={{
-                    color: "#926916",
+                    color: "var(--secondary-color)",
                     opacity: 0.7,
                     fontSize: "10px",
                     fontFamily: "Funnel Sans, sans-serif",

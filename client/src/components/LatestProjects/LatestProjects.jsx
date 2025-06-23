@@ -18,22 +18,28 @@ function LatestProjects({ activeIndex, visitedSlides }) {
 
   const Projects = [
     {
-      name: "Magic eyes",
+      name: "IDEA ESTATE",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a unde dignissimos suscipit dicta esse maiores nihil vero dolorum porro, quo, cupiditate eius fuga ea modi, reprehenderit ducimus explicabo exercitationem odio! Sequi.",
-      image: "./project1.webp",
+        "High-impact visual campaign for IDEA ESTATE’s Royal Tower, emphasizing luxury living, flexible payments, and investment value — driving strong engagement and qualified leads.",
+      image: "./project1.jpeg",
     },
     {
-      name: "Project 2",
+      name: "Aghnam Aldera",
       description:
-        "Vestibulum quis enim vel nisi tincidunt faucibus. Sed euismod, nunc eget tristique placerat, justo mauris dapibus velit, at interdum ipsum diam ac enim.",
-      image: "./project2.jpg",
+        "Tasty visuals and bold branding for Aghnam Al-Deira, highlighting premium meats and irresistible flavor — boosting customer appetite, engagement, and daily orders.",
+      image: "./project2aghnam.jpeg",
     },
     {
-      name: "Project 3",
+      name: "efreshha w farfeshha",
       description:
-        "Morbi consectetur lacus et ipsum commodo, ut tincidunt neque molestie. Sed euismod, nunc eget tristique placerat, justo mauris dapibus velit, at interdum ipsum diam ac enim.",
-      image: "./project3.jpg",
+        "A relaxed, fun campaign for Efreshhaa w Farfeshhaa, highlighting stress-free online shopping with bold visuals, smart copy, and instant access via QR and mobile UI.",
+      image: "./project3.jpeg",
+    },
+    {
+      name: "monstel",
+      description:
+        "A creative hair growth campaign for Monstel Oil, highlighting real regrowth results with a visual concept that blends nature, care, and powerful transformation.",
+      image: "./project4.jpeg",
     },
   ];
 
@@ -175,6 +181,7 @@ function LatestProjects({ activeIndex, visitedSlides }) {
           >
             {/* First Swiper */}
             <Swiper
+              spaceBetween={20}
               autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,
@@ -210,6 +217,7 @@ function LatestProjects({ activeIndex, visitedSlides }) {
                     }}
                   >
                     <img
+                      loading="lazy"
                       style={{
                         aspectRatio: "1",
                         width: "calc(100% )",
@@ -238,6 +246,7 @@ function LatestProjects({ activeIndex, visitedSlides }) {
               }}
             >
               <Swiper
+                spaceBetween={20}
                 style={{
                   width: "100%",
                   flexGrow: "1",
@@ -262,6 +271,8 @@ function LatestProjects({ activeIndex, visitedSlides }) {
                       display: "flex",
                       justifyContent: "flex-start",
                       alignItems: "flex-start",
+                      fontSize:
+                        "clamp(0.875rem, 0.6364rem + 1.0909vw, 1.25rem)",
                     }}
                     className="SLideDescription"
                     key={index}
@@ -273,10 +284,10 @@ function LatestProjects({ activeIndex, visitedSlides }) {
               <Button
                 sx={{
                   variant: "contained",
-                  backgroundColor: "#aaaaaa6c",
-                  border: "1px solid #fb613d",
+                  backgroundColor: "#4b4646b7",
+                  border: "1px solid var(--secondary-color)",
                   fontFamily: "var(--font-headding)",
-                  color: "#fb613d",
+                  color: "var(--secondary-color)",
                   fontSize: "15px",
                   fontWeight: "bold",
                   transition: "0.3s ease-in-out",

@@ -5,15 +5,15 @@
     color: white;
     transition: 0.3s ease-in-out;
     &:hover {
-      color: #f86c29;
+      color: var(--secondary-color);
     }
   }
   &.Slide4,
   &.Slide5 {
-    color: #926916;
+    color: var(--secondary-color);
     a {
       opacity: 0.7;
-      color: #926916;
+      color: var(--secondary-color);
       &:hover {
         scale: 1.1;
         opacity: 1;
