@@ -84,9 +84,9 @@ function ContactUs({ activeIndex, visitedSlides }) {
               <motion.span
                 initial={{ width: 0 }}
                 animate={
-                  visitedSlides.has(6)
+                  visitedSlides.has(5)
                     ? { width: "50px" } // No animation if already visited
-                    : activeIndex === 6
+                    : activeIndex === 5
                     ? { width: "50px" }
                     : {}
                 }
@@ -96,9 +96,9 @@ function ContactUs({ activeIndex, visitedSlides }) {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={
-                  visitedSlides.has(6)
+                  visitedSlides.has(5)
                     ? { opacity: 1 } // No animation if already visited
-                    : activeIndex === 6
+                    : activeIndex === 5
                     ? { opacity: 1 }
                     : {}
                 }
@@ -123,11 +123,11 @@ function ContactUs({ activeIndex, visitedSlides }) {
                     }}
                     viewport={{ once: true }}
                     animate={
-                      visitedSlides.has(6)
+                      visitedSlides.has(5)
                         ? {
                             opacity: 1,
                           }
-                        : activeIndex === 6
+                        : activeIndex === 5
                         ? {
                             opacity: 1,
                           }
@@ -145,9 +145,9 @@ function ContactUs({ activeIndex, visitedSlides }) {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={
-                  visitedSlides.has(6)
+                  visitedSlides.has(5)
                     ? { opacity: 1 } // No animation if already visited
-                    : activeIndex === 6
+                    : activeIndex === 5
                     ? { opacity: 1 }
                     : {}
                 }

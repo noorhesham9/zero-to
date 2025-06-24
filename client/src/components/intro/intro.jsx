@@ -55,15 +55,12 @@ const NetflixDeepZoom = ({ startIntro }) => {
   const [Size, setSize] = useState(600);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(false);
-    }, 8300); // 10 seconds
-    return () => clearTimeout(timer);
-  }, []);
-
-  React.useEffect(() => {
     if (startIntro) {
       setVisible(true);
+      const timer = setTimeout(() => {
+        setVisible(false);
+      }, 8300); // 10 seconds
+      return () => clearTimeout(timer);
     } else {
       setVisible(false);
     }

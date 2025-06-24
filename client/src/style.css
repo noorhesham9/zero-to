@@ -62,7 +62,8 @@ body {
 .main-swiper.indx0,
 .main-swiper.indx1,
 .main-swiper.indx2,
-.main-swiper.indx3 {
+.main-swiper.indx3,
+.main-swiper.indx5 {
   > .swiper-pagination {
     left: 15px !important;
     right: auto !important;
@@ -111,7 +112,7 @@ body {
     background-image: url("/Zero-To-logo-wos.svg");
   }
 
-  .main-swiperbullets.swiper-pagination-bullet:not(:nth-child(7))
+  .main-swiperbullets.swiper-pagination-bullet:not(:nth-child(6))
     .dot
     .dot2:after {
     content: "";
@@ -136,52 +137,79 @@ body {
     font-weight: 700;
   }
 }
-
-.main-swiper.indx4,
-.main-swiper.indx5,
-.main-swiper.indx6 {
-  .swiper-pagination-bullet.main-swiperbullets .text {
-    color: var(--secondary-color);
-    opacity: 0.8;
-    font-size: 14px;
-    margin-left: 10px;
-    transition: 0.3s ease-in-out;
-    margin-top: 3px;
-  }
-  .swiper-pagination-bullet-active.main-swiperbullets .text {
-    color: var(--secondary-color);
-    opacity: 1;
-    font-size: large;
-    font-weight: 700;
-  }
-
+.main-swiper.indx4 {
   > .swiper-pagination {
     left: 15px !important;
     right: auto !important;
     font-family: "Caveat", cursive;
   }
   .swiper-pagination-bullet.main-swiperbullets .dot {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background: transparent;
-    border: 2px solid var(--secondary-color);
-    border-radius: 50%;
+    /* border: 2px solid #fff; */
+    /* border-radius: 50%; */
+    background-image: url("/Zero-To-logoWhite.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .dot2 {
+      width: 15px;
+      height: 15px;
+      background: red;
+
+      border-radius: 50%;
+    }
     transition: 0.3s ease-in-out;
+    .dot2 {
+      width: 10px;
+      height: 10px;
+      background: transparent;
+    }
   }
-  .swiper-pagination-bullet-active.main-swiperbullets .dot {
-    width: 9px;
-    height: 9px;
-    background: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-  }
-  .main-swiperbullets.swiper-pagination-bullet::before {
+  .swiper-pagination-bullet.main-swiperbullets:not(:nth-child(1))
+    .dot
+    .dot2:before {
     content: "";
     position: absolute;
     width: 2px;
     height: 15px;
-    background: #92691699;
-    top: -11px;
-    left: 5px;
+    background: rgba(173, 173, 173, 0.6);
+    top: 0px;
+    left: 4px;
+  }
+
+  .swiper-pagination-bullet-active.main-swiperbullets .dot {
+    width: 10px;
+    height: 10px;
+    background-image: url("/Zero-To-logo-wos.svg");
+  }
+
+  .main-swiperbullets.swiper-pagination-bullet:not(:nth-child(6))
+    .dot
+    .dot2:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: rgba(173, 173, 173, 0.6);
+    bottom: 0px;
+    left: 4px;
+  }
+
+  .swiper-pagination-bullet.main-swiperbullets .text {
+    color: rgb(173, 173, 173);
+    font-size: 14px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    margin-top: 3px;
+  }
+
+  .swiper-pagination-bullet-active.main-swiperbullets .text {
+    color: var(--secondary-color);
+    font-size: large;
+    font-weight: 700;
   }
 }
 @media (max-width: 600px) {

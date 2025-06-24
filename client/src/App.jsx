@@ -46,7 +46,7 @@ function App() {
     "PHILOSOPHY",
     "LATEST PROJECTS",
     "SERVICES",
-    "PRICING",
+    // "PRICING",
     "CONTACT",
   ];
 
@@ -56,7 +56,7 @@ function App() {
     "Philosophy",
     "Latest Projects",
     "Services",
-    "Pricing",
+    // "Pricing",
     "Contact",
   ];
   const swiperRef = useRef(null);
@@ -141,9 +141,9 @@ function App() {
         <SwiperSlide>
           <Services visitedSlides={visitedSlides} activeIndex={activeIndex} />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <Pricing visitedSlides={visitedSlides} activeIndex={activeIndex} />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <ContactUs visitedSlides={visitedSlides} activeIndex={activeIndex} />
         </SwiperSlide>

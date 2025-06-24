@@ -149,19 +149,6 @@ function Footer({ slide }) {
               icon={faTiktok}
             />{" "}
           </a>
-          <a
-            href="#"
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            <FontAwesomeIcon
-              style={{
-                fontSize: "20px",
-              }}
-              icon={faTwitter}
-            />
-          </a>
         </Box>
       </Box>
     </div>
