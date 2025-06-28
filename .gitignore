@@ -26,3 +26,4 @@ config.env
 server/config.env
 *.env
 */*.env
+codes 
