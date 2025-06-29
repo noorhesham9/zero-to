@@ -18,19 +18,9 @@ const messageSchema = new mongoose.Schema(
     },
     phoneNumber: {
       type: String,
-      required: true,
-      validate: {
-        validator: function (v) {
-          return /^(\+20|0)1[0-2,5]{1}[0-9]{8}$/.test(v);
-        },
-        message: (props) =>
-          `${props.value} is not a valid Egyptian phone number!`,
-      },
+      default: "NOT PROVIDED",
     },
-    services: {
-      type: String,
-      required: true,
-    },
+
     message: {
       type: String,
       required: true,

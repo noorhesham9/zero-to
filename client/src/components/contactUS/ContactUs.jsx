@@ -1,29 +1,20 @@
 /* eslint-disable react/prop-types */
 import {
-  Autocomplete,
   Box,
   Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  styled,
+  createTheme,
   TextField,
+  ThemeProvider,
 } from "@mui/material";
 import { Container } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
-import Textarea from "@mui/joy/Textarea";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { themeOptions } from "../../theme";
+
 function ContactUs({ activeIndex, visitedSlides }) {
-  const sentence = "Contact Form"; // Your text
+  const theme = createTheme(themeOptions);
+  const sentence = "Contact Form";
   const words = sentence.split(" ");
 
   const validationSchema = Yup.object({
@@ -32,19 +23,24 @@ function ContactUs({ activeIndex, visitedSlides }) {
       .email("Invalid email address")
       .required("Email is required"),
     phoneNumber: Yup.string().matches(
-      /^[0-9]{10,15}$/,
-      "Phone number must be valid"
+      /^01[0125][0-9]{8}$/,
+      "Invalid phone number format"
     ),
-
-    subject: Yup.string().required("Subject is required"),
     message: Yup.string().required("Message is required"),
   });
 
-  // Submit handler
-  const handleSubmit = (values, { resetForm }) => {
-    console.log("Form submitted:", values);
-    // You can send values to the server here (e.g., via Axios)
-    resetForm();
+  const handleSubmit = async (values, { resetForm, setSubmitting }) => {
+    try {
+      console.log("Submitted!", values);
+
+      await new Promise((res) => setTimeout(res, 1000));
+
+      resetForm();
+    } catch (err) {
+      console.error("Submission error", err);
+    } finally {
+      setSubmitting(false);
+    }
   };
   return (
     <Box
@@ -85,7 +81,7 @@ function ContactUs({ activeIndex, visitedSlides }) {
                 initial={{ width: 0 }}
                 animate={
                   visitedSlides.has(5)
-                    ? { width: "50px" } // No animation if already visited
+                    ? { width: "50px" }
                     : activeIndex === 5
                     ? { width: "50px" }
                     : {}
@@ -97,7 +93,7 @@ function ContactUs({ activeIndex, visitedSlides }) {
                 initial={{ opacity: 0 }}
                 animate={
                   visitedSlides.has(5)
-                    ? { opacity: 1 } // No animation if already visited
+                    ? { opacity: 1 }
                     : activeIndex === 5
                     ? { opacity: 1 }
                     : {}
@@ -146,7 +142,7 @@ function ContactUs({ activeIndex, visitedSlides }) {
                 initial={{ opacity: 0 }}
                 animate={
                   visitedSlides.has(5)
-                    ? { opacity: 1 } // No animation if already visited
+                    ? { opacity: 1 }
                     : activeIndex === 5
                     ? { opacity: 1 }
                     : {}
@@ -168,227 +164,193 @@ function ContactUs({ activeIndex, visitedSlides }) {
                     position: "relative",
                   }}
                 >
-                  <Formik
-                    initialValues={{
-                      name: "",
-                      email: "",
-                      phoneNumber: "",
-                      subject: "",
-                      message: "",
-                    }}
-                    validationSchema={validationSchema}
-                    onSubmit={handleSubmit}
-                  >
-                    {({ values }) => {
-                      console.log(values);
-                      return (
-                        <Form
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "3px",
-                            width: "100%",
-                            margin: "0px auto 15px",
-                          }}
-                        >
-                          <Box
-                            sx={{
+                  <ThemeProvider theme={theme}>
+                    <Formik
+                      initialValues={{
+                        name: "",
+                        email: "",
+                        phoneNumber: "",
+                        message: "",
+                      }}
+                      validationSchema={validationSchema}
+                      onSubmit={handleSubmit}
+                    >
+                      {({ submitForm, values, errors }) => {
+                        console.log(values);
+                        console.log("Form Errors", errors);
+                        return (
+                          <Form
+                            style={{
                               display: "flex",
                               flexDirection: "column",
                               gap: "3px",
-                            }}
-                          >
-                            <Field
-                              as={TextField}
-                              type="text"
-                              name="name"
-                              variant="filled"
-                              label="Name"
-                              size="small"
-                              sx={{
-                                backgroundColor: "white",
-                                opacity: 0.8,
-                                width: "100%",
-                                borderRadius: "5px",
-                              }}
-                            />
-                            <ErrorMessage
-                              name="name"
-                              component="div"
-                              style={{
-                                fontFamily: "var(--font-headding)",
-                                fontSize: "15px",
-                                color: "red",
-                              }}
-                            />
-                          </Box>
-
-                          <Box
-                            sx={{
-                              display: "flex",
-                              gap: "3px",
-                              flexDirection: "column",
-                            }}
-                          >
-                            <Field
-                              size="small"
-                              as={TextField}
-                              type="email"
-                              name="email"
-                              variant="filled"
-                              label="Email"
-                              sx={{
-                                backgroundColor: "white",
-                                opacity: 0.8,
-                                width: "100%",
-                                borderRadius: "5px",
-                              }}
-                            />
-                            <ErrorMessage
-                              name="email"
-                              component="div"
-                              style={{
-                                width: "210px",
-                                fontFamily: "var(--font-headding)",
-                                fontSize: "15px",
-                                color: "red",
-                              }}
-                            />
-                          </Box>
-
-                          <Box
-                            sx={{
-                              display: "flex",
-                              height: "fit-content",
-                              gap: "3px",
-                              flexDirection: "column",
-                            }}
-                          >
-                            <Field
-                              as={TextField}
-                              type="text"
-                              size="small"
-                              name="phoneNumber"
-                              variant="filled"
-                              label="Phone Number"
-                              sx={{
-                                height: "fit-content",
-                                backgroundColor: "white",
-                                opacity: 0.8,
-                                width: "100%",
-                                borderRadius: "5px",
-                              }}
-                            />
-                            <ErrorMessage
-                              name="phoneNumber"
-                              component="div"
-                              style={{
-                                width: "210px",
-                                fontFamily: "var(--font-headding)",
-                                fontSize: "15px",
-                                color: "red",
-                              }}
-                            />
-                          </Box>
-
-                          <div>
-                            <Field name="subject">
-                              {({ field, form }) => (
-                                <Autocomplete
-                                  size="small"
-                                  sx={{
-                                    width: "100%",
-                                  }}
-                                  options={[
-                                    "General Inquiry",
-                                    "Support",
-                                    "Feedback",
-                                  ]}
-                                  value={form.values.subject}
-                                  onChange={(e, newValue) => {
-                                    form.setFieldValue("subject", newValue);
-                                  }}
-                                  renderInput={(params) => (
-                                    <TextField
-                                      {...params}
-                                      label="Subject"
-                                      variant="filled"
-                                      name="subject"
-                                      sx={{
-                                        backgroundColor: "white",
-                                        opacity: 0.8,
-                                        borderRadius: "5px",
-                                      }}
-                                    />
-                                  )}
-                                />
-                              )}
-                            </Field>
-                            <ErrorMessage
-                              name="subject"
-                              component="div"
-                              style={{
-                                width: "210px",
-                                fontFamily: "var(--font-headding)",
-                                fontSize: "15px",
-                                color: "red",
-                              }}
-                            />
-                          </div>
-
-                          <Box
-                            sx={{
-                              display: "flex",
-                              gap: "3px",
-                              flexDirection: "column",
-                            }}
-                          >
-                            <Field
-                              as={Textarea}
-                              minRows={2}
-                              maxRows={3}
-                              sx={{
-                                backgroundColor: "white",
-                                opacity: 0.8,
-                                width: "100%",
-                                borderRadius: "5px",
-                              }}
-                              name="message"
-                              placeholder="Message"
-                            />
-                            <ErrorMessage
-                              name="message"
-                              component="div"
-                              style={{
-                                width: "210px",
-                                fontFamily: "var(--font-headding)",
-                                fontSize: "15px",
-                                color: "red",
-                              }}
-                            />
-                          </Box>
-
-                          <Button
-                            sx={{
-                              backgroundColor: "white",
                               width: "100%",
-                              color: "#e6a421",
-                              fontFamily: "Caveat, cursive",
-                              fontSize: "20px",
-                              borderRadius: "5px",
-                              "&:hover": {
-                                backgroundColor: "#e6a421",
-                                color: "white",
-                              },
+                              margin: "0px auto 15px",
                             }}
-                            type="submit"
                           >
-                            Send
-                          </Button>
-                        </Form>
-                      );
-                    }}
-                  </Formik>
+                            <Box
+                              sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "3px",
+                              }}
+                            >
+                              <Field
+                                as={TextField}
+                                type="text"
+                                name="name"
+                                variant="filled"
+                                label="Name"
+                                sx={{
+                                  border: "1px solid var(--secondary-color)",
+
+                                  backgroundColor: "white",
+                                  opacity: 0.8,
+                                  width: "100%",
+                                  borderRadius: "5px",
+                                }}
+                              />
+                              <ErrorMessage
+                                name="name"
+                                component="div"
+                                style={{
+                                  fontFamily: "var(--font-headding)",
+                                  fontSize: "15px",
+                                  color: "red",
+                                }}
+                              />
+                            </Box>
+
+                            <Box
+                              sx={{
+                                display: "flex",
+                                gap: "3px",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <Field
+                                as={TextField}
+                                type="email"
+                                name="email"
+                                variant="filled"
+                                label="Email"
+                                sx={{
+                                  border: "1px solid var(--secondary-color)",
+
+                                  backgroundColor: "white",
+                                  opacity: 0.8,
+                                  width: "100%",
+                                  borderRadius: "5px",
+                                }}
+                              />
+                              <ErrorMessage
+                                name="email"
+                                component="div"
+                                style={{
+                                  width: "210px",
+                                  fontFamily: "var(--font-headding)",
+                                  fontSize: "15px",
+                                  color: "red",
+                                }}
+                              />
+                            </Box>
+
+                            <Box
+                              sx={{
+                                display: "flex",
+                                height: "fit-content",
+                                gap: "3px",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <Field
+                                as={TextField}
+                                type="text"
+                                name="phoneNumber"
+                                variant="filled"
+                                label="Phone Number"
+                                sx={{
+                                  height: "fit-content",
+                                  backgroundColor: "white",
+                                  opacity: 0.8,
+                                  width: "100%",
+                                  border: "1px solid var(--secondary-color)",
+
+                                  borderRadius: "5px",
+                                }}
+                              />
+                              <ErrorMessage
+                                name="phoneNumber"
+                                component="div"
+                                style={{
+                                  width: "210px",
+                                  fontFamily: "var(--font-headding)",
+                                  fontSize: "15px",
+                                  color: "red",
+                                }}
+                              />
+                            </Box>
+
+                            <Box
+                              sx={{
+                                display: "flex",
+                                gap: "3px",
+                                flexDirection: "column",
+                              }}
+                            >
+                              <Field
+                                as={TextField}
+                                multiline
+                                rows={2} // You can change the number of visible rows
+                                sx={{
+                                  backgroundColor: "white",
+                                  opacity: 0.8,
+                                  width: "100%",
+                                  borderRadius: "5px",
+                                  border: "1px solid var(--secondary-color)",
+                                }}
+                                name="message"
+                                label="Your Message"
+                              />
+                              <ErrorMessage
+                                name="message"
+                                component="div"
+                                style={{
+                                  width: "210px",
+                                  fontFamily: "var(--font-headding)",
+                                  fontSize: "15px",
+                                  color: "red",
+                                }}
+                              />
+                            </Box>
+
+                            <Button
+                              sx={{
+                                backgroundColor: "white",
+                                width: "100%",
+                                color: "var(--secondary-color)",
+                                fontFamily: "Caveat, cursive",
+                                fontSize: "20px",
+                                borderRadius: "5px",
+                                "&:hover": {
+                                  backgroundColor: "var(--secondary-color)",
+                                  color: "white",
+                                },
+                              }}
+                              disabled={Object.keys(errors).length > 0}
+                              type="submit"
+                              onClick={() => {
+                                console.log("buton clicked");
+                                submitForm();
+                              }}
+                            >
+                              Send
+                            </Button>
+                          </Form>
+                        );
+                      }}
+                    </Formik>
+                  </ThemeProvider>
                 </Box>
               </motion.div>
             </Box>
