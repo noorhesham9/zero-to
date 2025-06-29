@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { themeOptions } from "../../theme";
-
+import axios from "axios";
 function ContactUs({ activeIndex, visitedSlides }) {
   const theme = createTheme(themeOptions);
   const sentence = "Contact Form";
@@ -32,9 +32,19 @@ function ContactUs({ activeIndex, visitedSlides }) {
   const handleSubmit = async (values, { resetForm, setSubmitting }) => {
     try {
       console.log("Submitted!", values);
-
-      await new Promise((res) => setTimeout(res, 1000));
-
+      axios
+        .post("https://zero-to.vercel.app/Api/v1/sendMessage", {
+          name: values.name,
+          email: values.email,
+          phoneNumber: values.phoneNumber,
+          message: values.message,
+        })
+        .then((response) => {
+          console.log("Response:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error sending message:", error);
+        });
       resetForm();
     } catch (err) {
       console.error("Submission error", err);

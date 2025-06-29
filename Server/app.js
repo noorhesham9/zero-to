@@ -9,11 +9,22 @@ dotenv.config({ path: "./config.env" });
 let app = express();
 app.use(express.json());
 app.use(express.static("./public"));
+
+const allowedOrigins = [
+  "https://zero-to.netlify.app",
+  "http://localhost:5173",
+  "https://zero-too.vercel.app",
+];
 app.use(
   cors({
-    origin: "https://zero-to.netlify.app",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-    withCredentials: true,
   })
 );
 
