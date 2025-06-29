@@ -57,10 +57,10 @@ app.post("/Api/v1/sendMessage", async (req, res, next) => {
         message: "Name must be between 3 and 50 characters",
       });
     }
-    if (message.length < 10 || message.length > 500) {
+    if (message.length < 3 || message.length > 500) {
       return res.status(400).json({
         status: "fail",
-        message: "Message must be between 10 and 500 characters",
+        message: "Message must be between 3 and 500 characters",
       });
     }
     if (
@@ -140,7 +140,7 @@ app.post("/Api/v1/sendMessage", async (req, res, next) => {
     res.status(201).json({
       status: "success",
       data: newMessage,
-      message: "Message created successfully",
+      message: "Message Sent Successfully we will contact you soon",
     });
   } catch (error) {
     console.log(error);

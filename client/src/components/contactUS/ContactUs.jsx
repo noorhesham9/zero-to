@@ -1,18 +1,29 @@
 /* eslint-disable react/prop-types */
 import {
+  Alert,
+  AlertTitle,
   Box,
   Button,
+  Collapse,
   createTheme,
+  IconButton,
   TextField,
   ThemeProvider,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import { Container } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { themeOptions } from "../../theme";
 import axios from "axios";
+import { useState } from "react";
 function ContactUs({ activeIndex, visitedSlides }) {
+  const [open, setOpen] = useState(true);
+  const [AlertData, setAlertData] = useState({
+    severity: "",
+    message: "",
+  });
   const theme = createTheme(themeOptions);
   const sentence = "Contact Form";
   const words = sentence.split(" ");
@@ -40,11 +51,21 @@ function ContactUs({ activeIndex, visitedSlides }) {
           message: values.message,
         })
         .then((response) => {
-          console.log("Response:", response.data);
+          console.log("Response from server:", response.data);
+          if (response.data.status === "success") {
+            setAlertData({
+              severity: "success",
+              message: response.data.message,
+            });
+          } else {
+            setAlertData({
+              severity: "error",
+              message: response.data.message,
+            });
+          }
+          setOpen(true);
         })
-        .catch((error) => {
-          console.error("Error sending message:", error);
-        });
+        .catch((error) => {});
       resetForm();
     } catch (err) {
       console.error("Submission error", err);
@@ -367,6 +388,42 @@ function ContactUs({ activeIndex, visitedSlides }) {
           </Box>
         </AnimatePresence>
       </Container>
+      <Collapse
+        sx={{
+          position: "absolute",
+          bottom: "20px",
+          right: "20px",
+          maxWidth: "100%",
+          zIndex: 1000,
+        }}
+        in={open}
+      >
+        <Alert
+          severity={AlertData.severity || "info"}
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+          sx={{ mb: 2 }}
+        >
+          <AlertTitle>
+            {AlertData.severity === "success"
+              ? "Success"
+              : AlertData.severity === "error"
+              ? "Error"
+              : "Info"}
+          </AlertTitle>
+          {AlertData.message || "This is a default alert message."}
+        </Alert>
+      </Collapse>
     </Box>
   );
 }
