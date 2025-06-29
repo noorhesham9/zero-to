@@ -17,9 +17,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { themeOptions } from "../../theme";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function ContactUs({ activeIndex, visitedSlides }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [AlertData, setAlertData] = useState({
     severity: "",
     message: "",
@@ -73,6 +73,15 @@ function ContactUs({ activeIndex, visitedSlides }) {
       setSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (open) {
+      const timer = setTimeout(() => {
+        setOpen(false);
+      }, 5000); // Close alert after 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [open]);
   return (
     <Box
       className="ContactUsBox"

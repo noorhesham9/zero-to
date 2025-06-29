@@ -140,7 +140,7 @@ app.post("/Api/v1/sendMessage", async (req, res, next) => {
     res.status(201).json({
       status: "success",
       data: newMessage,
-      message: "Message Sent Successfully we will contact you soon",
+      message: "Message Sent Successfully We Will Contact You Soon",
     });
   } catch (error) {
     console.log(error);
