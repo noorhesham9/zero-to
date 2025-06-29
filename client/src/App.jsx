@@ -34,7 +34,11 @@ function App() {
       }, 500);
     };
 
-    window.addEventListener("load", handleLoad);
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
     return () => {
       window.removeEventListener("load", handleLoad);
